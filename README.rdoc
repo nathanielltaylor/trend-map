@@ -1,28 +1,14 @@
-== README
+## TrendMaps
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An interactive mapping app that provides a handy, visual interface to Twitter data on what people are talking about where and how they feel about it.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Features
+* [X] User sign up and authentication
+* [] Interactive map
+* [] Trends superimposed on map
+* [] Trends searchable
+* [] Locations searchable
+* [] Sentiment analysis by topic or location
+* [] Ability to add recommended queries
+* [] Ability to vote on recommendations
+* [] Sentiment analysis maps
