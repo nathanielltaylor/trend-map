@@ -1,3 +1,7 @@
+![Build Status](https://codeship.com/projects/c042def0-4cf7-0133-5535-566112b803ab/status?branch=master)
+![Code Climate](https://codeclimate.com/github/nathanielltaylor/trend-map.png)
+![Coverage Status](https://coveralls.io/repos/nathanielltaylor/trend-map/badge.png)
+
 ## TrendMaps
 
 An interactive mapping app that provides a handy, visual interface to Twitter data on what people are talking about where and how they feel about it.
