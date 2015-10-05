@@ -10,11 +10,11 @@ class TweetsController < ApplicationController
 
     if params[:search]
       query = params[:search]
-      @tweets = client.search("##{query}").take(10) # TWITTER GEM
+      @tweets = client.search("##{query}").take(25)
       if current_user
-        Search.create(query: params[:search], trend_or_location: true, user: current_user)
+        Search.create(query: params[:search], trend_or_location: "Trend", user: current_user)
       end
-    elsif params[:location]
+    elsif params[:local]
       ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
         ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
       location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
@@ -22,19 +22,16 @@ class TweetsController < ApplicationController
       @tweets = client.search(q).take(25)
       # binding.pry
       if current_user
-        Search.create(query: location.real_region_name, trend_or_location: true, user: current_user)
+        Search.create(query: location.real_region_name, trend_or_location: "Location", user: current_user)
       end
-      # "/1.1/search/tweets.json?geocode=#{location.latitude},#{location.longitude},100mi&count=50"
-      # client = Grackle::Client.new(
-      #   :auth=>{
-      #     :ssl=>true,
-      #     :handlers=>{:json=>Grackle::Handlers::StringHandler.new},
-      #     :type=>:oauth,
-      #     :consumer_key=>'ENV["TWITTER_CONSUMER_KEY"]', :consumer_secret=>'ENV["TWITTER_CONSUMER_SECRET"]',
-      #     :token=>'ENV["TWITTER_ACCESS_TOKEN"]', :token_secret=>'ENV["TWITTER_ACCESS_SECRET"]'
-      # })
-      # client.search.tweets?(q)
-
+    elsif params[:location]
+      location = params[:location]
+      #TO COORDINATES
+      query = open("https://maps.googleapis.com/maps/api/geocode/json?address=#{location}&key=AIzaSyCCAhlkiSK9wpBRhmfK_MxzXqflAQRf784")
+      
+      #REVERSE
+      # query = open("https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCCAhlkiSK9wpBRhmfK_MxzXqflAQRf784")
+      binding.pry
     end
 
   end

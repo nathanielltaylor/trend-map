@@ -1,6 +1,10 @@
 <%= @user.email %>
 <ul>
 <% @user.searches.each do |s| %>
-  <li><%= s.query %></li>
+  <% if s.trend_or_location == "Trend" %>
+  <li><a href="#">#<%= s.query %> (<%= s.trend_or_location %>)</li></a>
+  <% elsif s.trend_or_location == "Location" %>
+  <li><a href="#"><%= s.query %> (<%= s.trend_or_location %>)</li></a>
+  <% end %>
 <% end %>
 </ul>

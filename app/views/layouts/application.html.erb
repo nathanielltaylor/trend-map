@@ -18,18 +18,30 @@
       <ul class="right">
 
         <li class="has-form">
-       <div class="row collapse">
-       <div class="large-8 small-9 columns">
-         <%= form_tag(tweets_path, method: "get") do %>
-         <%= text_field_tag :search, params[:search], placeholder: "Search by Hashtag" %>
-       </form>
-       </li>
-         <li>
-         <%= submit_tag "Search", name: nil, class: "button" %>
-         <% end %>
-       </div>
-     </div>
-   </li>
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+              <%= form_tag(tweets_path, class: "nav-form", method: "get") do %>
+              <%= text_field_tag :search, params[:search], placeholder: "Search by Hashtag" %>
+            </li>
+            <li>
+              <%= submit_tag "Search", name: nil, class: "button" %>
+              <% end %>
+            </div>
+          </div>
+        </li>
+
+        <li class="has-form">
+          <div class="row collapse">
+            <div class="large-8 small-9 columns">
+              <%= form_tag(tweets_path, class: "nav-form", method: "get") do %>
+              <%= text_field_tag :location, params[:location], placeholder: "Search by Location" %>
+            </li>
+            <li>
+              <%= submit_tag "Search", name: nil, class: "button" %>
+              <% end %>
+            </div>
+          </div>
+        </li>
 
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
