@@ -17,3 +17,6 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [ ] Ability to vote on recommendations
 - [ ] Sentiment analysis maps
 - [ ] API data is cached for a set amount of time
+- [ ] Personalized user dashboard
+- [ ] User location maps
+- [ ] Connection to Twitter
