@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SecTrendMap</title>
+  <title>TrendMap</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+
   <nav class="top-bar">
     <ul class="title-area">
       <li class="name">
-        <h1><a href="/">SecTrendMap</a></h1>
+        <h1><a href="/">TrendMap</a></h1>
       </li>
     </ul>
 
     <section class="top-bar-section">
       <ul class="right">
+
+        <li class="has-form">
+       <div class="row collapse">
+       <div class="large-8 small-9 columns">
+         <%= form_tag(tweets_path, method: "get") do %>
+         <%= text_field_tag :search, params[:search], placeholder: "Search by Hashtag" %>
+       </form>
+       </li>
+         <li>
+         <%= submit_tag "Search", name: nil, class: "button" %>
+         <% end %>
+       </div>
+     </div>
+   </li>
+
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
@@ -33,6 +48,17 @@
   <%- end -%>
 
   <%= yield %>
+
+  <table width="70%" class="shareable"%>
+  <tr>
+    <td><%= facebook_button %></td>
+    <td><%= twitter_button %></td>
+    <td><%= google_plus_button %></td>
+    <td><%= linkedin_button %></td>
+    <td><%= reddit_button %></td>
+    <td><%= tumblr_button %></td>
+  </tr>
+</table>
 
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>

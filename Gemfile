@@ -36,7 +36,8 @@ end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
+  gem 'pry-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
@@ -57,3 +58,12 @@ gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails'
 gem 'geocoder'
+gem 'kaminari'
+gem 'carrierwave'
+gem 'fog'
+gem 'shareable'
+gem 'grackle'
+gem 'twitter'
+gem 'acts_as_votable'
+gem 'httparty'
+gem 'oauth'

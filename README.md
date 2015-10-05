@@ -10,7 +10,7 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] User sign up and authentication
 - [ ] Interactive map
 - [ ] Trends superimposed on map
-- [ ] Trends searchable
+- [X] Trends searchable
 - [ ] Locations searchable
 - [ ] Sentiment analysis by topic or location
 - [ ] Ability to add recommended queries
