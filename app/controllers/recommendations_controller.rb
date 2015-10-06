@@ -53,6 +53,46 @@ class RecommendationsController < ApplicationController
     end
   end
 
+  def upvote
+    @recommendation = Recommendation.find(params[:id])
+    respond_to do |format|
+      format.json do
+        if current_user
+          @recommendation.upvote_by current_user
+          rating = @recommendation.score
+          recommendation = @recommendation
+          valid = true
+          render json: [recommendation, rating, valid]
+        else
+          rating = @recommendation.score
+          recommendation = @recommendation
+          valid = false
+          render json: [recommendation, rating, valid]
+        end
+      end
+    end
+  end
+
+  def downvote
+    @recommendation = Recommendation.find(params[:id])
+    respond_to do |format|
+      format.json do
+        if current_user
+          @recommendation.downvote_by current_user
+          recommendation = @recommendation
+          rating = @recommendation.score
+          valid = true
+          render json: [recommendation, rating, valid]
+        else
+          rating = @recommendation.score
+          recommendation = @recommendation
+          valid = false
+          render json: [recommendation, rating, valid]
+        end
+      end
+    end
+  end
+
   private
 
   def recommendation_params

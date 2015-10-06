@@ -1,6 +1,21 @@
 <h1>Recommended Searches</h1>
 <% @recommendations.each do |r| %>
   <div class="row panel">
+
+    <ul class="vote">
+          <li>
+            <%= link_to '🔺', '#', class: "upvote_rec",
+              recommendation: r.id,
+              rating: r.score %>
+          </li>
+          <li class="update-rating-<%= r.id %>"><%= r.score %></li>
+          <li>
+            <%= link_to '🔻', '#', class: "downvote_rec",
+              recommendation: r.id,
+              rating: r.score %>
+          </li>
+        </ul>
+
     <%= link_to r.query, recommendation_path(r) %>
     <%= r.trend_or_location %>
     <%= r.category %>

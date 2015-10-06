@@ -12,4 +12,10 @@ class Recommendation < ActiveRecord::Base
     'Science and Technology',
     'Sports and Entertainment'] }
   validates :user_id, presence: true
+
+  acts_as_votable
+
+  def score
+    get_upvotes.size - get_downvotes.size
+  end
 end
