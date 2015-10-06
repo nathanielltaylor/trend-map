@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151004194211) do
+ActiveRecord::Schema.define(version: 20151005200556) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "recommendations", force: :cascade do |t|
     t.string  "query",             null: false
-    t.boolean "trend_or_location", null: false
+    t.string  "trend_or_location", null: false
     t.string  "category",          null: false
     t.string  "description"
     t.integer "user_id",           null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20151004194211) do
 
   create_table "searches", force: :cascade do |t|
     t.string  "query",                             null: false
-    t.boolean "trend_or_location",                 null: false
+    t.string  "trend_or_location",                 null: false
     t.boolean "hidden",            default: false, null: false
     t.integer "user_id",                           null: false
   end

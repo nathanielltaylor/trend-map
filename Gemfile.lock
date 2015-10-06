@@ -200,6 +200,7 @@ GEM
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
     geocoder (1.2.11)
+    geoip (1.6.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     grackle (0.3.0)
@@ -395,10 +396,12 @@ DEPENDENCIES
   fog
   foundation-rails
   geocoder
+  geoip
   grackle
   httparty
   jbuilder (~> 2.0)
   jquery-rails
+  json
   kaminari
   launchy
   oauth

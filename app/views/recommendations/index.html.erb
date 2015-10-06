@@ -1,4 +1,13 @@
 <h1>Recommended Searches</h1>
 <% @recommendations.each do |r| %>
-  <%= r.query %>
+  <div class="row panel">
+    <%= link_to r.query, recommendation_path(r) %>
+    <%= r.trend_or_location %>
+    <%= r.category %>
+    <%= r.description if r.description %>
+  </div>
+<% end %>
+
+<% if current_user %>
+  <%= link_to "Suggest a New Search", new_recommendation_path, class: "button" %>
 <% end %>
