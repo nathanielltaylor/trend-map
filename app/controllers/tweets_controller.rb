@@ -14,15 +14,15 @@ class TweetsController < ApplicationController
 
       if current_user
         Search.create(
-        query: params[:search],
-        trend_or_location: "Trend",
-        user: current_user
-        )
+          query: params[:search],
+          trend_or_location: "Trend",
+          user: current_user
+          )
       end
 
     elsif params[:local]
       ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
-        ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
+      ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
       location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
       q = "geocode:#{location.latitude},#{location.longitude},1mi"
       @tweets = client.search(q).take(25)
