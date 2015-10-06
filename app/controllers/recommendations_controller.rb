@@ -63,5 +63,4 @@ class RecommendationsController < ApplicationController
       :description
     )
   end
-
 end

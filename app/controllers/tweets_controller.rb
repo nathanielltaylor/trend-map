@@ -13,7 +13,11 @@ class TweetsController < ApplicationController
       @tweets = client.search("##{query}").take(25)
 
       if current_user
-        Search.create(query: params[:search], trend_or_location: "Trend", user: current_user)
+        Search.create(
+        query: params[:search],
+        trend_or_location: "Trend",
+        user: current_user
+        )
       end
 
     elsif params[:local]
@@ -24,7 +28,11 @@ class TweetsController < ApplicationController
       @tweets = client.search(q).take(25)
 
       if current_user
-        Search.create(query: location.real_region_name, trend_or_location: "Location", user: current_user)
+        Search.create(
+          query: location.real_region_name,
+          trend_or_location: "Location",
+          user: current_user
+          )
       end
 
     elsif params[:location]
@@ -38,11 +46,12 @@ class TweetsController < ApplicationController
 
       if current_user
         place_name = top_result["address_components"].first["long_name"]
-        Search.create(query: place_name, trend_or_location: "Location", user: current_user)
+        Search.create(
+          query: place_name,
+          trend_or_location: "Location",
+          user: current_user
+          )
       end
     end
-
   end
-
-
 end

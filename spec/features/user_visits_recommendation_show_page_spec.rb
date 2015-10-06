@@ -15,7 +15,9 @@ feature 'recommendation show page shows details on that recommendation', %{
     expect(page).to have_content("Boston")
     expect(page).to have_content("Trend")
     expect(page).to have_content("General")
-    expect(page).to have_content("I like to know what people are saying around where I live")
+    expect(page).to have_content(
+      "I like to know what people are saying around where I live"
+    )
   end
 
 end

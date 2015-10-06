@@ -43,7 +43,9 @@ feature 'user can add new recommendation', %{
     visit recommendations_path
     expect(page).to_not have_content("Suggest a New Search")
     visit new_recommendation_path
-    expect(page).to have_content("Please sign in or create an account to suggest a search.")
+    expect(page).to have_content(
+      "Please sign in or create an account to suggest a search."
+    )
   end
 
 end
