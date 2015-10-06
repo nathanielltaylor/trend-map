@@ -26,12 +26,14 @@ class TweetsController < ApplicationController
       end
     elsif params[:location]
       location = params[:location]
-      #TO COORDINATES
-      query = open("https://maps.googleapis.com/maps/api/geocode/json?address=#{location}&key=AIzaSyCCAhlkiSK9wpBRhmfK_MxzXqflAQRf784")
-      
-      #REVERSE
-      # query = open("https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyCCAhlkiSK9wpBRhmfK_MxzXqflAQRf784")
-      binding.pry
+      query = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{location}&key=AIzaSyCCAhlkiSK9wpBRhmfK_MxzXqflAQRf784")
+      lat = query.first[1].first["geometry"]["location"]["lat"]
+      lng = query.first[1].first["geometry"]["location"]["lng"]
+      q = "geocode:#{lat},#{lng},5mi"
+
+      @tweets = client.search(q).take(25)
+
+
     end
 
   end
