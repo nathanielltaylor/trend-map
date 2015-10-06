@@ -8,6 +8,8 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 
 ## Features
 
+[Trello board](https://trello.com/b/PmEn0OA2/trend-map)(currently private)
+
 #### User Profiles
 - [X] User sign up and authentication
 - [ ] Usernames and profile pictures
