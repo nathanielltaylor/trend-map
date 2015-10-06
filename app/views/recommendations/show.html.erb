@@ -1,1 +1,7 @@
 <%= @recommendation.query %>
+<%= @recommendation.trend_or_location %>
+<%= @recommendation.category %>
+<%= @recommendation.description if @recommendation.description %>
+<% if current_user && @recommendation.user_id == current_user.id %>
+  <%= link_to "Edit Suggestion", edit_recommendation_path(@recommendation), class: "button" %>
+<% end %>

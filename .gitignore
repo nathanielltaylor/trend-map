@@ -1,3 +1,9 @@
-/coverage
 .env
-/tmp/cache/assets/development/sprockets/v3.0
+
+/log/*
+!/log/.keep
+/tmp
+/coverage
+
+
+/public/uploads

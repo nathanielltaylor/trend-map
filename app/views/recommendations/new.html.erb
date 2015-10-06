@@ -1,0 +1,8 @@
+<% if current_user %>
+  <div class='row text-center'>
+    <h1>Create a New Recommendation</h1>
+  </div>
+    <%= render 'form' %>
+<% else %>
+  <p>Please sign in or create an account to suggest a search.</p>
+<% end %>
