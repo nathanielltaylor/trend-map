@@ -7,10 +7,14 @@ Rails.application.routes.draw do
   resources :recommendations
   resources :recommendations, only: [:show] do
       member do
-        put "like", to: "recommendations#upvote", defaults: { format: 'json' }
-        put "dislike", to: "recommendations#downvote", defaults: { format: 'json' }
+        put "like", to: "recommendations#upvote", defaults: {
+          format: 'json'
+        }
+        put "dislike", to: "recommendations#downvote", defaults: {
+          format: 'json'
+        }
       end
-    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
