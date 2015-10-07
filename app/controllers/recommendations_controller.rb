@@ -1,6 +1,17 @@
 class RecommendationsController < ApplicationController
   def index
-    @recommendations = Recommendation.all
+    if params[:user_search] || params[:trend_or_location] || params[:category]
+      search = params[:user_search] unless params[:user_search] == nil
+      trend_or_location = params[:trend_or_location] unless params[:trend_or_location] == nil
+      category = params[:category] unless params[:category] == nil
+      @recommendations = Recommendation.search(
+        search,
+        trend_or_location,
+        category
+        ).sort_by { |rec| rec.score }.reverse
+    else
+      @recommendations = Recommendation.all.sort_by { |rec| rec.score }.reverse
+    end
   end
 
   def show
