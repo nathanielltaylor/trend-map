@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="large-8 large-centered columns">
-    <span>
+    <span class="rec-search">
       <%= form_tag(recommendations_path, method: "get") do %>
         <%= text_field_tag :user_search, params[:user_search], placeholder: "Search Suggestions" %>
         <%= select_tag :trend_or_location, options_for_select([nil, 'Trend', 'Location']) %>

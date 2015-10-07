@@ -18224,3 +18224,68 @@ Processing by HomesController#index as HTML
   Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
   Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (4.3ms)
 Completed 200 OK in 159ms (Views: 158.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recommendations" for ::1 at 2015-10-06 20:47:24 -0400
+Processing by RecommendationsController#index as HTML
+  [1m[35mRecommendation Load (0.4ms)[0m  SELECT "recommendations".* FROM "recommendations"
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", "t"]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", "f"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", "t"]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", "f"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", "t"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", "f"]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", "t"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", "f"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", "t"]]
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", "f"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 1], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 3], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 4], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 2], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL[0m  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", true]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "votes" WHERE "votes"."votable_id" = $1 AND "votes"."votable_type" = $2 AND "votes"."vote_flag" = $3 AND "votes"."vote_scope" IS NULL  [["votable_id", 5], ["votable_type", "Recommendation"], ["vote_flag", false]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered recommendations/index.html.erb within layouts/application (46.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (13.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (11.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (9.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (9.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (4.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (12.0ms)
+Completed 200 OK in 423ms (Views: 383.0ms | ActiveRecord: 10.1ms)

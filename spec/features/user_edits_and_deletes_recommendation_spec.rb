@@ -46,7 +46,6 @@ feature 'user can delete recommendation', %{
     click_link "Delete"
 
     expect(page).to_not have_content("Boston")
-    expect(page).to_not have_content("General")
     expect(page).to_not have_content(
       "I like to know what people are saying around where I live"
     )
