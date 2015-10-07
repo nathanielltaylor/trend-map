@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.upvote_rec').on("click", function(event) {
+  $('.upvote-rec').on("click", function(event) {
     event.preventDefault();
     var recId = event.currentTarget.attributes[1].value;
     $.ajax({
@@ -16,7 +16,7 @@ $(document).ready(function() {
     });
   });
 
-  $('.downvote_rec').on("click", function(event) {
+  $('.downvote-rec').on("click", function(event) {
     event.preventDefault();
     var recId = event.currentTarget.attributes[1].value;
     $.ajax({

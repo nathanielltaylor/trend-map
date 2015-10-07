@@ -23,3 +23,7 @@
   height: 85%;
   width: 85%;
 }
+
+.vote {
+  list-style: none;
+}

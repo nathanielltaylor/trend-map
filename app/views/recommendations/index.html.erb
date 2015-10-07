@@ -18,13 +18,13 @@
 
     <ul class="vote">
           <li>
-            <%= link_to '🔺', '#', class: "upvote_rec",
+            <%= link_to '▲', '#', class: "upvote-rec",
               recommendation: r.id,
               rating: r.score %>
           </li>
           <li class="update-rating-<%= r.id %>"><%= r.score %></li>
           <li>
-            <%= link_to '🔻', '#', class: "downvote_rec",
+            <%= link_to '▼', '#', class: "downvote-rec",
               recommendation: r.id,
               rating: r.score %>
           </li>
