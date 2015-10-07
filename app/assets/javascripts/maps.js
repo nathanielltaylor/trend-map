@@ -1,19 +1,182 @@
-// $(document).ready(function() {
-//   function loadMapShapes() {
-//     map.data.loadGeoJson('https://www.googleapis.com/mapsengine/v1/tables/12421761926155747447-14043129889721455791/features' +
-//     '?key=' + 'AIzaSyCCAhlkiSK9wpBRhmfK_MxzXqflAQRf784' + '&version=published',
-//     { idPropertyName: 'STATE' });
-//   }
+// function initMap() {
+//   var userLocation = {lat: -25.363, lng: 131.044};
 //
-//
-//   function initialize() {
-//     var mapCanvas = document.getElementById('map');
-//     var mapOptions = {
-//       center: new google.maps.LatLng(44.5403, -78.5463),
-//       zoom: 8,
-//       mapTypeId: google.maps.MapTypeId.ROADMAP
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     center: {lat: 39.5, lng: -98.35},
+//     zoom: 4,
+//     styles: [
+//     {
+//         "featureType": "all",
+//         "elementType": "labels.text.fill",
+//         "stylers": [
+//             {
+//                 "saturation": 36
+//             },
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 40
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "all",
+//         "elementType": "labels.text.stroke",
+//         "stylers": [
+//             {
+//                 "visibility": "on"
+//             },
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 16
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "all",
+//         "elementType": "labels.icon",
+//         "stylers": [
+//             {
+//                 "visibility": "off"
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "administrative",
+//         "elementType": "geometry.fill",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 20
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "administrative",
+//         "elementType": "geometry.stroke",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 17
+//             },
+//             {
+//                 "weight": 1.2
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "landscape",
+//         "elementType": "geometry",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 20
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "poi",
+//         "elementType": "geometry",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 21
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "road.highway",
+//         "elementType": "geometry.fill",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 17
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "road.highway",
+//         "elementType": "geometry.stroke",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 29
+//             },
+//             {
+//                 "weight": 0.2
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "road.arterial",
+//         "elementType": "geometry",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 18
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "road.local",
+//         "elementType": "geometry",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 16
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "transit",
+//         "elementType": "geometry",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 19
+//             }
+//         ]
+//     },
+//     {
+//         "featureType": "water",
+//         "elementType": "geometry",
+//         "stylers": [
+//             {
+//                 "color": "#000000"
+//             },
+//             {
+//                 "lightness": 17
+//             }
+//         ]
 //     }
-//     var map = new google.maps.Map(mapCanvas, mapOptions)
-//   }
-//   google.maps.event.addDomListener(window, 'load', initialize);
-// });
+// ]
+//   });
+//
+//   var marker = new google.maps.Marker({
+//     position: userLocation,
+//     map: map,
+//     title: 'You are here'
+//   });
+//
+// }
