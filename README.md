@@ -4,7 +4,7 @@
 
 ## TrendMaps
 
-An interactive mapping app that provides a handy, visual interface to Twitter data on what people are talking about where and how they feel about it.
+An interactive mapping app that provides a handy, visual interface to Twitter data on what people are talking about where and, more importantly, how they feel about it.
 
 ## Features
 

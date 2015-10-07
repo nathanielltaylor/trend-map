@@ -18,3 +18,8 @@
 .nav-form {
   width: 180%;
 }
+
+#map {
+  height: 85%;
+  width: 85%;
+}
