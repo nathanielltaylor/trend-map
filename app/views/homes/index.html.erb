@@ -221,7 +221,7 @@ function initMap() {
   });
 
   var infowindow<%= index %> = new google.maps.InfoWindow({
-    content: "<%= tweet.text %>"
+    content: "<%= tweet.text.gsub(/\P{ASCII}/, '').gsub("\n",'') %>",
   });
 
   <% end %>
@@ -245,5 +245,5 @@ function initMap() {
 
 </script>
 <script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJ1ZDtg7OufxvTaqEjOwEzKfbu1F7Q2Ss&callback=initMap">
+src= <%= "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_GEOCODING"]}&callback=initMap" %> >
 </script>
