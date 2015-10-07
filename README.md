@@ -17,7 +17,8 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [ ] Connection to Twitter
 
 #### Mapping
-- [ ] Interactive map
+- [X] Interactive map
+- [X] Tweets superimposed on map
 - [ ] Trends superimposed on map
 - [ ] Sentiment analysis maps
 - [ ] User location maps
