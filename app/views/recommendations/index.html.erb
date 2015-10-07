@@ -1,6 +1,35 @@
 <h1>Recommended Searches</h1>
+
+<div class="row">
+  <div class="large-8 large-centered columns">
+    <span class="rec-search">
+      <%= form_tag(recommendations_path, method: "get") do %>
+        <%= text_field_tag :user_search, params[:user_search], placeholder: "Search Suggestions" %>
+        <%= select_tag :trend_or_location, options_for_select([nil, 'Trend', 'Location']) %>
+        <%= select_tag :category, options_for_select([nil, 'General', 'Politics and Religion', 'Business and Economics', 'Science and Technology', 'Sports and Entertainment']) %>
+        <%= submit_tag "Search", name: nil, class: "button" %>
+      <% end %>
+    </span>
+  </div>
+</div>
+
 <% @recommendations.each do |r| %>
   <div class="row panel">
+
+    <ul class="vote">
+          <li>
+            <%= link_to '🔺', '#', class: "upvote_rec",
+              recommendation: r.id,
+              rating: r.score %>
+          </li>
+          <li class="update-rating-<%= r.id %>"><%= r.score %></li>
+          <li>
+            <%= link_to '🔻', '#', class: "downvote_rec",
+              recommendation: r.id,
+              rating: r.score %>
+          </li>
+        </ul>
+
     <%= link_to r.query, recommendation_path(r) %>
     <%= r.trend_or_location %>
     <%= r.category %>

@@ -12,4 +12,19 @@ class Recommendation < ActiveRecord::Base
     'Science and Technology',
     'Sports and Entertainment'] }
   validates :user_id, presence: true
+
+  def self.search(user_search, trend_or_location = nil, category = nil)
+    where(
+      "query ilike ? AND trend_or_location ilike ? AND category ilike ?",
+      "%#{user_search}%",
+      "%#{trend_or_location}%",
+      "%#{category}%"
+      )
+  end
+
+  acts_as_votable
+
+  def score
+    get_upvotes.size - get_downvotes.size
+  end
 end

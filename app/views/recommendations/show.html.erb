@@ -1,3 +1,17 @@
+<ul class="vote">
+      <li>
+        <%= link_to '🔺', '#', class: "upvote_rec",
+          recommendation: @recommendation.id,
+          rating: @recommendation.score %>
+      </li>
+      <li class="update-rating-<%= @recommendation.id %>"><%= @recommendation.score %></li>
+      <li>
+        <%= link_to '🔻', '#', class: "downvote_rec",
+          recommendation: @recommendation.id,
+          rating: @recommendation.score %>
+      </li>
+    </ul>
+
 <%= @recommendation.query %>
 <%= @recommendation.trend_or_location %>
 <%= @recommendation.category %>

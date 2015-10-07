@@ -31,8 +31,8 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 
 #### Recommendation Features
 - [X] Ability to add recommended queries
-- [ ] Ability to search recommendations
-- [ ] Ability to vote on recommendations
+- [X] Ability to search recommendations
+- [X] Ability to vote on recommendations
 
 #### Other
 - [ ] API data is cached for a set amount of time
