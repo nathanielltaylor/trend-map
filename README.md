@@ -2,7 +2,7 @@
 ![Code Climate](https://codeclimate.com/github/nathanielltaylor/trend-map.png)
 ![Coverage Status](https://coveralls.io/repos/nathanielltaylor/trend-map/badge.png)
 
-## TrendMaps
+## TweetMaps
 
 An interactive mapping app that provides a handy, visual interface to Twitter data on what people are talking about where and, more importantly, how they feel about it.
 

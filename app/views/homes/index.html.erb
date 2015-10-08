@@ -214,7 +214,8 @@ function initMap() {
   var marker<%= index %> = new google.maps.Marker({
     position: {lat: lat, lng: lng},
     map: map,
-    title: 'Tweet'
+    title: 'Tweet',
+    icon: '/assets/tweets_maps.png'
   });
   marker<%= index %>.addListener('click', function() {
     infowindow<%= index %>.open(map, marker<%= index %>);
@@ -226,6 +227,20 @@ function initMap() {
 
   <% end %>
   <% end %>
+
+  var trendMarker = new google.maps.Marker({
+    position: { lat: 40, lng: -99},
+    map: map,
+    title: 'Trend',
+    icon: '/assets/trends_maps.png'
+  });
+  trendMarker.addListener('click', function() {
+    trendInfowindow.open(map, trendMarker);
+  });
+
+  var trendInfowindow = new google.maps.InfoWindow({
+    content: 'This is a trend!'
+  });
 
   var marker = new google.maps.Marker({
     position: userLocation,
@@ -239,6 +254,8 @@ function initMap() {
   var infowindow = new google.maps.InfoWindow({
     content: 'You are here!'
   });
+
+
 
 
 }
