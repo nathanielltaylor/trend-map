@@ -22,7 +22,8 @@ class HomesController < ApplicationController
         raw << w
       end
     end
-    @local_trends = raw.find_all { |e| raw.count(e) > 2 && e.length > 3 }.uniq!
+    common_words = raw.find_all { |e| raw.count(e) > 2 && e.length > 3 }.uniq!
+    @local_trends = common_words.delete_if { |w| /(have|this|with|just|your|when|&amp;|from)/.match(w)}
     # binding.pry
 
     #

@@ -27,3 +27,11 @@
 .vote {
   list-style: none;
 }
+
+.trends-list {
+  list-style: none;
+}
+
+.trend-item {
+  display: inline;
+}

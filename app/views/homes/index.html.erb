@@ -2,7 +2,21 @@
 <%= submit_tag "See Tweets Near Me", name: "local", class: "button" %>
 <% end %>
 
-
+<h4>Current Trends in the US</h4>
+<ul class="trends-list">
+  <li>All Data (Trend Markers)</li>
+  <% @remote_trends.each do |r| %>
+  <li class="trend-item"><%= r.keys[0] %></li>
+  <% end %>
+</ul>
+<% if @local_trends.any? %>
+<ul class="trends-list">
+  <li>Currently Represented (In Tweet Markers)</li>
+  <% @local_trends.each do |l| %>
+  <li class="trend-item"><%= l %></li>
+  <% end %>
+<% end %>
+</ul>
 <div id="map"></div>
 <script type="text/javascript">
 
@@ -245,7 +259,7 @@ function initMap() {
   });
 
   var trendInfowindow<%= index %> = new google.maps.InfoWindow({
-    content: <%= trend.keys[0] %>
+    content: "<%= trend.keys[0] %>"
   });
   <% end %>
 
