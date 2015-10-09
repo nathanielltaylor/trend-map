@@ -16,6 +16,7 @@ class HomesController < ApplicationController
     q = "geocode:39.5,-98.35,1500mi"
     all_tweets = client.search(q).take(50)
     @tweets = all_tweets.delete_if {|t| /(#|)(job|hiring|work)/i.match(t.text)}
+
     raw = []
     @tweets.each do |t|
       words = t.text.split
@@ -91,10 +92,11 @@ class HomesController < ApplicationController
       location = HTTParty.get("http://where.yahooapis.com/v1/place/#{place}?format=json&appid=#{ENV["YAHOO"]}")
       lat = location["place"]["centroid"]["latitude"]
       lng = location["place"]["centroid"]["longitude"]
-      finished_trend = {trend.to_sym => {
-        lat: lat,
-        lng: lng
-        }}
+      finished_trend = [trend, lat, lng]
+      # {trend.to_sym => {
+      #   lat: lat,
+      #   lng: lng
+      #   }}
       @remote_trends << finished_trend
       # binding.pry
     end
@@ -105,6 +107,10 @@ class HomesController < ApplicationController
     # info[0]["trends"].each do |trend|
     #   @remote_trends << trend.first[1]
     # end
+    respond_to do |format|
+      format.html
+      format.json { render json: [@lat, @lng, @tweets, @remote_trends] }
+    end
 
   end
 end
