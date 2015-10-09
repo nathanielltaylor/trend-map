@@ -12,6 +12,7 @@ class HomesController < ApplicationController
     location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
     @lat = location.latitude
     @lng = location.longitude
+
     q = "geocode:39.5,-98.35,1500mi"
     all_tweets = client.search(q).take(50)
     @tweets = all_tweets.delete_if {|t| /(#|)(job|hiring|work)/i.match(t.text)}
@@ -23,7 +24,7 @@ class HomesController < ApplicationController
       end
     end
     common_words = raw.find_all { |e| raw.count(e) > 2 && e.length > 3 }.uniq!
-    @local_trends = common_words.delete_if { |w| /(have|this|with|just|your|when|&amp;|from)/.match(w)}
+    @local_trends = common_words.delete_if { |w| /(have|this|with|just|your|when|&amp;|from|that|-&gt;)/.match(w)}
     # binding.pry
 
     #
@@ -42,6 +43,8 @@ class HomesController < ApplicationController
     access_token
     # address = URI("https://api.twitter.com/1.1/trends/place.json?id=23424977")
     address = URI("https://api.twitter.com/1.1/trends/available.json")
+    # address = APICache.get("https://api.twitter.com/1.1/trends/available.json")
+    # APICache.store = Moneta.new(:Memory)
     request = Net::HTTP::Get.new address.request_uri
     http = Net::HTTP.new address.host, address.port
     http.use_ssl = true
@@ -54,11 +57,15 @@ class HomesController < ApplicationController
       info = JSON.parse(response.body)
       us_trends = info.select { |i| i["countryCode"] == "US" }[0..5]
     end
+
     trend_locations = []
     us_trends.each do |trend|
       trend_locations << trend["woeid"]
     end
+    # binding.pry
+
     us_trend_markers = Hash.new {|h, k| h[k] = ''}
+
     trend_locations.each do |place|
       address = URI("https://api.twitter.com/1.1/trends/place.json?id=#{place}")
       # address = URI("https://api.twitter.com/1.1/application/rate_limit_status.json")
@@ -74,13 +81,12 @@ class HomesController < ApplicationController
         trend_response = JSON.parse(response.body)
         trend_name = trend_response.first["trends"][0]["name"]
         us_trend_markers.store(trend_name, place)
-        # binding.pry
       end
-          # binding.pry
-
+            # binding.pry
     end
 
     @remote_trends = []
+
     us_trend_markers.each do |trend, place|
       location = HTTParty.get("http://where.yahooapis.com/v1/place/#{place}?format=json&appid=#{ENV["YAHOO"]}")
       lat = location["place"]["centroid"]["latitude"]
@@ -90,6 +96,7 @@ class HomesController < ApplicationController
         lng: lng
         }}
       @remote_trends << finished_trend
+      # binding.pry
     end
 
           # binding.pry
