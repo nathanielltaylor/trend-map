@@ -19,14 +19,12 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 #### Mapping
 - [ ] Interactive map
 - [ ] Trends superimposed on map
-- [ ] Sentiment analysis maps
 - [ ] User location maps
 
 #### Data Querying
 - [X] Trends searchable
 - [X] Locations searchable
 - [X] User searches are saved to personalize experience
-- [ ] Sentiment analysis by topic or location
 - [ ] Advanced Search Form
 
 #### Recommendation Features
@@ -36,3 +34,8 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 
 #### Other
 - [ ] API data is cached for a set amount of time
+
+#### Sentiment analysis
+- [ ] By topic
+- [ ] By location
+- [ ] Indicated on map
