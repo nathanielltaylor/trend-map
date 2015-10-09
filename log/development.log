@@ -45220,3 +45220,1144 @@ Started GET "/assets/trends_maps.png" for ::1 at 2015-10-08 16:57:19 -0400
 
 Started GET "/" for ::1 at 2015-10-08 16:57:21 -0400
 Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 2669901ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/homes_controller.rb:72:in `block in index'
+  app/controllers/homes_controller.rb:60:in `each'
+  app/controllers/homes_controller.rb:60:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (149.3ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 17:42:00 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 8475335ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/homes_controller.rb:81:in `block in index'
+  app/controllers/homes_controller.rb:79:in `each'
+  app/controllers/homes_controller.rb:79:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (82.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (58.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (130.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:03:16 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 96762ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/homes_controller.rb:77:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (128.9ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:04:54 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 5498ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/homes_controller.rb:77:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (53.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:07:48 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 652192ms (ActiveRecord: 0.0ms)
+
+SystemExit (exit):
+  app/controllers/homes_controller.rb:81:in `block in index'
+  app/controllers/homes_controller.rb:79:in `each'
+  app/controllers/homes_controller.rb:79:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (25.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (99.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (155.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:18:47 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (7.4ms)
+  [1m[35mUser Load (7.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (12.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (8.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (12.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (13.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (4.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (12.3ms)
+Completed 200 OK in 36622ms (Views: 1030.4ms | ActiveRecord: 31.0ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:19:24 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:19:28 -0400
+
+
+Started GET "/assets/trends_maps.png" for ::1 at 2015-10-08 20:19:28 -0400
+
+
+Started GET "/" for ::1 at 2015-10-08 20:19:47 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (50.0ms)
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (16.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (8.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (9.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (12.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (5.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (9.0ms)
+Completed 200 OK in 495939ms (Views: 580.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:28:04 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:28:06 -0400
+
+
+Started GET "/assets/trends_maps.png" for ::1 at 2015-10-08 20:28:06 -0400
+
+
+Started GET "/" for ::1 at 2015-10-08 20:28:09 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 1865ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/homes_controller.rb:75:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (150.7ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:28:27 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 1312ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/homes_controller.rb:75:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.2ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:29:06 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 1716ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/homes_controller.rb:75:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (68.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (135.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:29:35 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 191114ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/homes_controller.rb:76:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (71.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (150.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:32:50 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 79183ms (ActiveRecord: 0.0ms)
+
+TypeError (no implicit conversion of String into Integer):
+  app/controllers/homes_controller.rb:77:in `[]'
+  app/controllers/homes_controller.rb:77:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (93.4ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:34:45 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (10.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (15.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (12.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (15.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (12.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (4.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (12.1ms)
+Completed 200 OK in 4604ms (Views: 407.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:34:49 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/trends_maps.png" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:34:50 -0400
+
+
+Started GET "/" for ::1 at 2015-10-08 20:35:35 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (10.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (8.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (10.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (10.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (5.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (8.3ms)
+Completed 200 OK in 3693ms (Views: 256.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:35:38 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/assets/trends_maps.png" for ::1 at 2015-10-08 20:35:39 -0400
+
+
+Started GET "/" for ::1 at 2015-10-08 20:35:48 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (7.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (9.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (8.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (10.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (14.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (4.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (8.2ms)
+Completed 200 OK in 3117ms (Views: 218.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:35:51 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:35:52 -0400
+
+
+Started GET "/assets/trends_maps.png" for ::1 at 2015-10-08 20:35:52 -0400
+
+
+Started GET "/" for ::1 at 2015-10-08 20:36:23 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 2475ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/homes_controller.rb:77:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (151.8ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:37:23 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (8.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (12.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (8.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (12.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (11.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (3.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (7.4ms)
+Completed 200 OK in 5370ms (Views: 368.8ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:37:28 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:37:29 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:37:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:37:29 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:37:29 -0400
+
+
+Started GET "/" for ::1 at 2015-10-08 20:38:42 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 1333ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/homes_controller.rb:77:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (143.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:40:11 -0400
+Processing by HomesController#index as HTML
+Completed 500 Internal Server Error in 1118ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `first' for nil:NilClass):
+  app/controllers/homes_controller.rb:77:in `block in index'
+  app/controllers/homes_controller.rb:61:in `each'
+  app/controllers/homes_controller.rb:61:in `index'
+
+
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.5ms)
+
+
+Started GET "/" for ::1 at 2015-10-08 20:42:29 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (7.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (13.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (11.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (8.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (9.9ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (4.7ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (8.7ms)
+Completed 200 OK in 2778ms (Views: 414.6ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:42:32 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:42:33 -0400
+
+
+Started GET "/" for ::1 at 2015-10-08 20:42:59 -0400
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_facebook.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.2ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_facebook.html.erb (11.8ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.5ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_twitter.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_twitter.html.erb (12.0ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_google_plus.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_google_plus.html.erb (11.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_linkedin.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_linkedin.html.erb (12.6ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.3ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_reddit.html.erb (4.4ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/_button_wrapper.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/partials/scripts/_tumblr.html.erb (0.1ms)
+  Rendered /Users/nattaylor/.gem/ruby/2.2.1/gems/shareable-1.1.4/app/views/shareable/_tumblr.html.erb (8.0ms)
+Completed 200 OK in 3014ms (Views: 271.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/foundation_and_overrides.self-7728e8a7d1f8ac12b267e4512f99778f49d9a5bc5a23e166a0bd19b13dfce7a0.css?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/application.self-a52f4be8b7a166a7a2f82c7763dba1b8220e3ada06328685292c728ad4a980ba.css?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.abide.self-f8b56c707a79139807305a5f7efc2aaa0848f0c677abcc056496f507e0192b79.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.self-ee5396739ce46beb039f26ea629172a74143752d74f703c6c3b219fc52aecf73.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.accordion.self-d55abdcb0a7a29512be2f31f63d418cc8cc4505a0a3c71946d25484b0a0b3f4e.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.alert.self-fbde7afb61e8ffd8ab9b717f0bed1e58cb9e0144a25cc773fea634d5554f62cd.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.clearing.self-54610737b435a97590fcb176848c3c7a44c4d55d369894260fa7c28c97a70a23.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.dropdown.self-c9ee29909e266373e5e814a73fc6ea062245ddd29466d35d232448f73350d78a.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.equalizer.self-7aa743bf4660deb2fb2f601c112806a1703c430067531da3f41e4afffe19fee9.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.interchange.self-dad8415355087cb21a16fa44bac20d602344d52de5aca9e588e3588fce5dd5a7.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.joyride.self-0a5271728699423f583dd5b3b8a11bfe0dc9fb5044446bcf3218ef8ca906a82d.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.magellan.self-a50193f172f11e57b373c3001072ba2d6b34b857ab251e9ded30af5242855687.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.offcanvas.self-75bffd0c7f4f0d2992ab95f0cc6959282ebb5807da70123d40c01d76e230ec88.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.orbit.self-f8d30eb1717c874db26723f9e07901ec0a325d59263f1404ee83a616bb597ad2.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.reveal.self-95f01feb3e25e47b58b78da0021ae2fffafdee70846682067c180e0e10f7b095.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.slider.self-8911a7352cb577b6b7973b0734d57d2b624c79286558ffa36fcac0c29b2d0bee.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.tab.self-9bf6791513d1b20e213bb1aee3df0bc17128c7e18421258dc68a2a4ccabe1647.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.tooltip.self-834156796c253580629cfffc720bdc3d191b1e5a5a6ddbc1102ecd08c876516c.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation/foundation.topbar.self-105416f061562f07c6a0a8057d68282fdc1eeb5dc306713fcae6c9a53001fc55.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/foundation.self-abe4ee7a105042f73b12b1f1a28788522d2f253445a475a94ab4d6e1f7b0ec52.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/maps.self-01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/votes.self-e2175dd5518451619def4b1488eec6baf6d321a5aa06cb3a7553944eaae8f0db.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-08 20:43:02 -0400
+
+
+Started GET "/assets/tweets_maps.png" for ::1 at 2015-10-08 20:43:03 -0400

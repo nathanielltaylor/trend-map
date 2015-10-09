@@ -228,19 +228,28 @@ function initMap() {
   <% end %>
   <% end %>
 
-  var trendMarker = new google.maps.Marker({
-    position: { lat: 40, lng: -99},
+
+
+  <% @remote_trends.each_with_index do |trend, index| %>
+  var trendLat = <%= trend.values[0][:lat] %>
+  var trendLng = <%= trend.values[0][:lng] %>
+
+  var trendMarker<%= index %> = new google.maps.Marker({
+    position: { lat: trendLat, lng: trendLng},
     map: map,
     title: 'Trend',
     icon: '/assets/trends_maps.png'
   });
-  trendMarker.addListener('click', function() {
-    trendInfowindow.open(map, trendMarker);
+  trendMarker<%= index %>.addListener('click', function() {
+    trendInfowindow<%= index %>.open(map, trendMarker<%= index %>);
   });
 
-  var trendInfowindow = new google.maps.InfoWindow({
-    content: 'This is a trend!'
+  var trendInfowindow<%= index %> = new google.maps.InfoWindow({
+    content: <%= trend.keys[0] %>
   });
+  <% end %>
+
+/////////////
 
   var marker = new google.maps.Marker({
     position: userLocation,

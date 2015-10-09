@@ -60,6 +60,7 @@ class HomesController < ApplicationController
     us_trend_markers = Hash.new {|h, k| h[k] = ''}
     trend_locations.each do |place|
       address = URI("https://api.twitter.com/1.1/trends/place.json?id=#{place}")
+      # address = URI("https://api.twitter.com/1.1/application/rate_limit_status.json")
       request = Net::HTTP::Get.new address.request_uri
       http = Net::HTTP.new address.host, address.port
       http.use_ssl = true
@@ -70,11 +71,27 @@ class HomesController < ApplicationController
       info = nil
       if response.code == '200' then
         trend_response = JSON.parse(response.body)
+        trend_name = trend_response.first["trends"][0]["name"]
+        us_trend_markers.store(trend_name, place)
         # binding.pry
       end
-      trend_name = trend_response.first["trends"][0]["name"].to_sym
-      us_trend_markers.store(trend_name, place)
+          # binding.pry
+
     end
+
+    @remote_trends = []
+    us_trend_markers.each do |trend, place|
+      location = HTTParty.get("http://where.yahooapis.com/v1/place/#{place}?format=json&appid=#{ENV["YAHOO"]}")
+      lat = location["place"]["centroid"]["latitude"]
+      lng = location["place"]["centroid"]["longitude"]
+      finished_trend = {trend.to_sym => {
+        lat: lat,
+        lng: lng
+        }}
+      @remote_trends << finished_trend
+    end
+
+          # binding.pry
 
     # @remote_trends = []
     # info[0]["trends"].each do |trend|
