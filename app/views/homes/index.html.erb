@@ -3,18 +3,27 @@
 <% end %>
 
 <h4>Current Trends in the US</h4>
+
+<% if @remote_trends.any? %>
 <ul class="trends-list">
-  <li>All Data (Trend Markers)</li>
-  <% @remote_trends.each do |r| %>
-  <li class="trend-item"><%= r[0] %></li>
+  <li>All Twitter Data (Trend Markers)</li>
+  | <% @remote_trends.each do |r| %>
+  <li class="trend-item"><%= r[0] %></li> |
   <% end %>
 </ul>
+<% else %>
+<p>No trending topics could be found. This probably indicates a problem connecting to Twitter's servers. Please check back later.</p>
+<% end %>
+
 <% if @local_trends.any? %>
 <ul class="trends-list">
   <li>Currently Represented (In Tweet Markers)</li>
-  <% @local_trends.each do |l| %>
-  <li class="trend-item"><%= l %></li>
+  | <% @local_trends.each do |l| %>
+  <li class="trend-item"><%= l %></li> |
   <% end %>
-<% end %>
 </ul>
+<% else %>
+<p>No patterns are currently discernible from the tweets represented here.</p>
+<% end %>
+
 <div id="map"></div>

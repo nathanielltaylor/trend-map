@@ -10,7 +10,7 @@ $(document).ready(function() {
           $('.update-rating-' + data[0].id).html(
             data[1]
           )} else {
-            alert('You need to sign in to vote!')
+            alert('Please sign in or create an account to vote!')
         };
       }
     });
@@ -27,7 +27,7 @@ $(document).ready(function() {
           $('.update-rating-' + data[0].id).html(
             data[1]
           )} else {
-            alert('You need to sign in to vote!')
+            alert('Please sign in or create an account to vote!')
         };
       }
     });
