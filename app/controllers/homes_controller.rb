@@ -54,7 +54,7 @@ class HomesController < ApplicationController
         words.each { |w| raw << w }
       end
       common_words = raw.select { |e| raw.count(e) > 2 && e.length > 3 }.uniq!
-      if common_words != nil
+      if !common_words.nil?
         common_words.delete_if do |w|
           /(have|this|with|just|your|when|&amp;|from|that|-&gt;|were)/i.match(w)
         end
