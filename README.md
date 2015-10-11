@@ -15,7 +15,6 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 #### User Profiles
 - [X] User sign up and authentication
 - [ ] User is publicly identified only by username
-- [ ] Profile pictures
 - [ ] Connection to Twitter*
 - [ ] Personalized user dashboard*
 
@@ -31,20 +30,21 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] Trends searchable
 - [X] Locations searchable
 - [X] User searches are saved to personalize experience
-- [ ] User can hide their searches from other users
 - [ ] User can delete searches permanently
+- [ ] User can hide their searches from other users*
 - [ ] Advanced Search Form*
 
 #### Recommendation Features
 - [X] Ability to add recommended queries
-- [X] Ability to search recommendations
+- [X] Search recommendations with any number of parameters
 - [X] Ability to vote on recommendations
 
 #### Data Storage
-- [ ] Tweets stored in the database for ___ minutes
-- [ ] Trends stored in the database for ___ minutes
+- [ ] Tweets stored in database for ___ minutes
+- [X] Trends stored in database for 20 minutes
 
 #### Sentiment analysis
 - [ ] By topic
 - [ ] By location
+- [ ] Overall on homepage*
 - [ ] Visualized on heatmaps*

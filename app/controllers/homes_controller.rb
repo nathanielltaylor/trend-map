@@ -62,10 +62,8 @@ class HomesController < ApplicationController
       end
     end
 
-    ###############
-
     sample_trend = Trend.first
-    if (sample_trend.created_at + 20.minutes) < DateTime.now.utc || sample_trend == nil
+    if sample_trend == nil || (sample_trend != nil && ((sample_trend.created_at + 20.minutes) < DateTime.now.utc))
 
       trend_locations = []
       available_trends_response = api_get("https://api.twitter.com/1.1/trends/available.json")
@@ -100,9 +98,6 @@ class HomesController < ApplicationController
     end
 
     @remote_trends = Trend.all
-    # binding.pry
-
-    ################
 
     respond_to do |format|
       format.html
