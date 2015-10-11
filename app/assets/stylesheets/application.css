@@ -18,3 +18,20 @@
 .nav-form {
   width: 180%;
 }
+
+#map {
+  height: 85%;
+  width: 85%;
+}
+
+.vote {
+  list-style: none;
+}
+
+.trends-list {
+  list-style: none;
+}
+
+.trend-item {
+  display: inline;
+}

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.upvote_rec').on("click", function(event) {
+  $(".upvote-rec").on("click", function(event) {
     event.preventDefault();
     var recId = event.currentTarget.attributes[1].value;
     $.ajax({
@@ -10,13 +10,13 @@ $(document).ready(function() {
           $('.update-rating-' + data[0].id).html(
             data[1]
           )} else {
-            alert('You need to sign in to vote!')
+            alert('Please sign in or create an account to vote!')
         };
       }
     });
   });
 
-  $('.downvote_rec').on("click", function(event) {
+  $(".downvote-rec").on("click", function(event) {
     event.preventDefault();
     var recId = event.currentTarget.attributes[1].value;
     $.ajax({
@@ -27,7 +27,7 @@ $(document).ready(function() {
           $('.update-rating-' + data[0].id).html(
             data[1]
           )} else {
-            alert('You need to sign in to vote!')
+            alert('Please sign in or create an account to vote!')
         };
       }
     });
