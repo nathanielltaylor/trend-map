@@ -9,7 +9,7 @@ FactoryGirl.define do
 
   factory :recommendation do
     query "Boston"
-    trend_or_location "Trend"
+    trend_or_location "Location"
     category "General"
     description "I like to know what people are saying around where I live"
     association :user

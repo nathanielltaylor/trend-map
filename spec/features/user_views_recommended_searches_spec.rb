@@ -12,7 +12,7 @@ feature 'recommendation index page shows all recommendations', %{
     visit root_path
     click_button("Suggested Searches")
     expect(page).to have_content("Boston")
-    expect(page).to have_content("Trend")
+    expect(page).to have_content("Location")
     expect(page).to have_content("General")
     expect(page).to have_content(
       "I like to know what people are saying around where I live"

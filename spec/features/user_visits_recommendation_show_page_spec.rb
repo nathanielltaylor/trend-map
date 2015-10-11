@@ -13,7 +13,7 @@ feature 'recommendation show page shows details on that recommendation', %{
     click_link "Boston"
     expect("/recommendations/#{rec.id}").to eq(current_path)
     expect(page).to have_content("Boston")
-    expect(page).to have_content("Trend")
+    expect(page).to have_content("Location")
     expect(page).to have_content("General")
     expect(page).to have_content(
       "I like to know what people are saying around where I live"
