@@ -62,15 +62,14 @@ class HomesController < ApplicationController
       end
     end
 
+    trend_locations = []
     available_trends_response = api_get("https://api.twitter.com/1.1/trends/available.json")
     if available_trends_response.code == '200'
       available_trends_info = JSON.parse(available_trends_response.body)
       us_trends = available_trends_info.select { |i| i["countryCode"] == "US" }[0..5]
-    end
-
-    trend_locations = []
-    us_trends.each do |trend|
-      trend_locations << trend["woeid"]
+      us_trends.each do |trend|
+        trend_locations << trend["woeid"]
+      end
     end
 
     us_trend_markers = Hash.new { |h, k| h[k] = '' }
