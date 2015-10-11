@@ -10,30 +10,41 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 
 [Trello board](https://trello.com/b/PmEn0OA2/trend-map)(currently private)
 
+(Starred features are under consideration)
+
 #### User Profiles
 - [X] User sign up and authentication
-- [ ] Usernames and profile pictures
-- [ ] Personalized user dashboard
-- [ ] Connection to Twitter
+- [ ] User is publicly identified only by username
+- [ ] Profile pictures
+- [ ] Connection to Twitter*
+- [ ] Personalized user dashboard*
 
 #### Mapping
 - [X] Interactive map
 - [X] Tweets superimposed on map
 - [X] Trends superimposed on map
-- [ ] Sentiment analysis maps
-- [ ] User location maps
+- [X] Fully JavaScript overlays
+- [ ] Sentiment analysis maps*
+- [ ] User location maps*
 
 #### Data Querying
 - [X] Trends searchable
 - [X] Locations searchable
 - [X] User searches are saved to personalize experience
-- [ ] Sentiment analysis by topic or location
-- [ ] Advanced Search Form
+- [ ] User can hide their searches from other users
+- [ ] User can delete searches permanently
+- [ ] Advanced Search Form*
 
 #### Recommendation Features
 - [X] Ability to add recommended queries
 - [X] Ability to search recommendations
 - [X] Ability to vote on recommendations
 
-#### Other
-- [ ] API data is cached for a set amount of time
+#### Data Storage
+- [ ] Tweets stored in the database for ___ minutes
+- [ ] Trends stored in the database for ___ minutes
+
+#### Sentiment analysis
+- [ ] By topic
+- [ ] By location
+- [ ] Visualized on heatmaps*
