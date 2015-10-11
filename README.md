@@ -40,7 +40,7 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] Ability to vote on recommendations
 
 #### Data Storage
-- [ ] Tweets stored in database for ___ minutes
+- [X] Tweets stored in database for 3 minutes
 - [X] Trends stored in database for 20 minutes
 
 #### Sentiment analysis

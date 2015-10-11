@@ -209,9 +209,8 @@ function initMap() {
     var trends = data[3]
 
     tweets.forEach(function(tweet){
-      if(tweet.place != null){
-        var lat = tweet.geo.coordinates[0]
-        var lng = tweet.geo.coordinates[1]
+        var lat = parseFloat(tweet.latitude)
+        var lng = parseFloat(tweet.longitude)
 
         var marker = new google.maps.Marker({
           position: {lat: lat, lng: lng},
@@ -225,7 +224,6 @@ function initMap() {
         var infowindow = new google.maps.InfoWindow({
           content: tweet.text
         });
-      }
     });
 
     trends.forEach(function(trend){
