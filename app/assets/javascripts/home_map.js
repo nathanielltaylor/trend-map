@@ -5,6 +5,7 @@ function initMap() {
     dataType: "json"
   })
   .done(function(data){
+    debugger;
     var userLocation = {lat: data[0], lng: data[1]};
 
     var map = new google.maps.Map(document.getElementById('map'), {
@@ -228,8 +229,8 @@ function initMap() {
     });
 
     trends.forEach(function(trend){
-      var trendLat = trend[1]
-      var trendLng = trend[2]
+      var trendLat = parseFloat(trend.latitude)
+      var trendLng = parseFloat(trend.longitude)
 
       var trendMarker = new google.maps.Marker({
         position: { lat: trendLat, lng: trendLng},
@@ -242,7 +243,7 @@ function initMap() {
         trendInfowindow.open(map, trendMarker);
       });
       var trendInfowindow = new google.maps.InfoWindow({
-        content: trend[0]
+        content: trend.name
       });
     });
 

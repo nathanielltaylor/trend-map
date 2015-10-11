@@ -62,34 +62,47 @@ class HomesController < ApplicationController
       end
     end
 
-    trend_locations = []
-    available_trends_response = api_get("https://api.twitter.com/1.1/trends/available.json")
-    if available_trends_response.code == '200'
-      available_trends_info = JSON.parse(available_trends_response.body)
-      us_trends = available_trends_info.select { |i| i["countryCode"] == "US" }[0..5]
-      us_trends.each do |trend|
-        trend_locations << trend["woeid"]
+    ###############
+
+    sample_trend = Trend.first
+    if (sample_trend.created_at + 20.minutes) < DateTime.now.utc || sample_trend == nil
+
+      trend_locations = []
+      available_trends_response = api_get("https://api.twitter.com/1.1/trends/available.json")
+      if available_trends_response.code == '200'
+        available_trends_info = JSON.parse(available_trends_response.body)
+        us_trends = available_trends_info.select { |i| i["countryCode"] == "US" }[0..5]
+        us_trends.each do |trend|
+          trend_locations << trend["woeid"]
+        end
+      end
+
+      us_trend_markers = Hash.new { |h, k| h[k] = '' }
+      trend_locations.each do |place|
+        trend_location_response = api_get("https://api.twitter.com/1.1/trends/place.json?id=#{place}")
+        if trend_location_response.code == '200'
+          trend_location_info = JSON.parse(trend_location_response.body)
+          trend_name = trend_location_info.first["trends"][0]["name"]
+          us_trend_markers.store(trend_name, place)
+          Trend.destroy_all
+        end
+      end
+
+      us_trend_markers.each do |trend, place|
+        location = HTTParty.get("http://where.yahooapis.com/v1/place/#{place}?format=json&appid=#{ENV["YAHOO"]}")
+        lat = location["place"]["centroid"]["latitude"]
+        lng = location["place"]["centroid"]["longitude"]
+        # finished_trend = [trend, lat, lng]
+        # @remote_trends << finished_trend
+        # finished_trend =
+        Trend.create(name: trend, latitude: lat, longitude: lng)
       end
     end
 
-    us_trend_markers = Hash.new { |h, k| h[k] = '' }
-    trend_locations.each do |place|
-      trend_location_response = api_get("https://api.twitter.com/1.1/trends/place.json?id=#{place}")
-      if trend_location_response.code == '200'
-        trend_location_info = JSON.parse(trend_location_response.body)
-        trend_name = trend_location_info.first["trends"][0]["name"]
-        us_trend_markers.store(trend_name, place)
-      end
-    end
+    @remote_trends = Trend.all
+    # binding.pry
 
-    @remote_trends = []
-    us_trend_markers.each do |trend, place|
-      location = HTTParty.get("http://where.yahooapis.com/v1/place/#{place}?format=json&appid=#{ENV["YAHOO"]}")
-      lat = location["place"]["centroid"]["latitude"]
-      lng = location["place"]["centroid"]["longitude"]
-      finished_trend = [trend, lat, lng]
-      @remote_trends << finished_trend
-    end
+    ################
 
     respond_to do |format|
       format.html
