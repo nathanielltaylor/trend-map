@@ -1,10 +1,11 @@
-<%= @user.email %>
+<h2><%= @user.username %></h2>
+<h4>Searches:</h4>
 <ul>
 <% @user.searches.each do |s| %>
   <% if s.trend_or_location == "Trend" %>
-  <li><a href="#">#<%= s.query %> (<%= s.trend_or_location %>)</li></a>
+  <li><%= link_to "#{s.query} (#{s.trend_or_location})", results_path(search: s.query) %></li>
   <% elsif s.trend_or_location == "Location" %>
-  <li><a href="#"><%= s.query %> (<%= s.trend_or_location %>)</li></a>
+  <li><%= link_to "#{s.query} (#{s.trend_or_location})", results_path(location: s.query) %></li>
   <% end %>
 <% end %>
 </ul>
