@@ -1,10 +1,11 @@
 $(document).ready(function() {
-  $(".upvote-rec").on("click", function(event) {
+  $(".vote-trigger-show").on("click", function(event) {
     event.preventDefault();
     var recId = event.currentTarget.attributes[1].value;
+    var direction = event.currentTarget.attributes[3].value
     $.ajax({
       method: 'PUT',
-      url: '/recommendations/' + recId + '/like',
+      url: '/recommendations/' + recId + '/' + direction,
       success: function(data){
         if(data[2] === true){
           $('.update-rating-' + data[0].id).html(
@@ -15,21 +16,19 @@ $(document).ready(function() {
       }
     });
   });
+});
 
-  $(".downvote-rec").on("click", function(event) {
+$(document).ready(function() {
+  $(".vote-trigger-index").on("click", function(event) {
     event.preventDefault();
-    var recId = event.currentTarget.attributes[1].value;
-    $.ajax({
-      method: 'PUT',
-      url: '/recommendations/' + recId + '/dislike',
-      success: function(data){
-        if(data[2] === true){
-          $('.update-rating-' + data[0].id).html(
-            data[1]
-          )} else {
-            alert('Please sign in or create an account to vote!')
-        };
-      }
-    });
+    // debugger;
+    // $.ajax({
+    //   method: 'GET',
+    //   url: '/recommendations',
+      // success: function(){
+        $("#all-recs").load("/recommendations #all-recs");
+        debugger;
+    //   }
+    // });
   });
 });
