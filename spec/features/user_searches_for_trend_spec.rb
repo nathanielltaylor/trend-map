@@ -10,7 +10,7 @@ feature 'user can search for trend', %{
     @user = FactoryGirl.create(:user)
     login(@user)
 
-    visit root_path
+    visit recommendations_path
     fill_in "search", with: "cats"
     within ".trend-search" do
       click_button "Search"

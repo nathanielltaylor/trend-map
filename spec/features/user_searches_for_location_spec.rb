@@ -10,7 +10,7 @@ feature 'user can search for location', %{
     @user = FactoryGirl.create(:user)
     login(@user)
 
-    visit root_path
+    visit recommendations_path
     fill_in "location", with: "San Francisco"
     within ".location-search" do
       click_button "Search"

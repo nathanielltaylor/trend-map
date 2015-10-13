@@ -204,13 +204,12 @@ function initMap() {
 
     });
 
-    var tweets = data[2]
-    var trends = data[3]
+    var tweets = data[2];
+    var trends = data[3];
 
     tweets.forEach(function(tweet){
-      if(tweet.place != null){
-        var lat = tweet.geo.coordinates[0]
-        var lng = tweet.geo.coordinates[1]
+        var lat = parseFloat(tweet.latitude);
+        var lng = parseFloat(tweet.longitude);
 
         var marker = new google.maps.Marker({
           position: {lat: lat, lng: lng},
@@ -224,12 +223,11 @@ function initMap() {
         var infowindow = new google.maps.InfoWindow({
           content: tweet.text
         });
-      }
     });
 
     trends.forEach(function(trend){
-      var trendLat = trend[1]
-      var trendLng = trend[2]
+      var trendLat = parseFloat(trend.latitude);
+      var trendLng = parseFloat(trend.longitude);
 
       var trendMarker = new google.maps.Marker({
         position: { lat: trendLat, lng: trendLng},
@@ -242,7 +240,7 @@ function initMap() {
         trendInfowindow.open(map, trendMarker);
       });
       var trendInfowindow = new google.maps.InfoWindow({
-        content: trend[0]
+        content: trend.name
       });
     });
 

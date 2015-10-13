@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
   resources :users
-  resources :searches, only: [:index, :show, :destroy]
+  resources :results, only: [:index, :show, :destroy]
   resources :tweets
   resources :recommendations
   resources :recommendations, only: [:show] do

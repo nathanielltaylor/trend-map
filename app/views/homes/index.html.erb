@@ -1,4 +1,4 @@
-<%= form_tag(tweets_path, method: "get") do %>
+<%= form_tag(results_path, method: "get") do %>
 <%= submit_tag "See Tweets Near Me", name: "local", class: "button" %>
 <% end %>
 
@@ -8,7 +8,7 @@
 <ul class="trends-list">
   <li>All Twitter Data (Trend Markers)</li>
   | <% @remote_trends.each do |r| %>
-  <li class="trend-item"><%= r[0] %></li> |
+  <li class="trend-item"><%= r.name %></li> |
   <% end %>
 </ul>
 <% else %>

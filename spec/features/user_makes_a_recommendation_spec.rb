@@ -10,8 +10,7 @@ feature 'user can add new recommendation', %{
     @user = FactoryGirl.create(:user)
     login(@user)
 
-    visit root_path
-    click_button("Suggested Searches")
+    visit recommendations_path
     click_link("Suggest a New Search")
 
     fill_in "Query", with: "Pope"
@@ -30,8 +29,7 @@ feature 'user can add new recommendation', %{
     @user = FactoryGirl.create(:user)
     login(@user)
 
-    visit root_path
-    click_button("Suggested Searches")
+    visit recommendations_path
     click_link("Suggest a New Search")
 
     click_button "Submit"

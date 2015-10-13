@@ -1,0 +1,18 @@
+<table>
+<tr>
+  <th>User</th>
+  <th>Content</th>
+  <th>Location</th>
+</tr>
+<tr>
+  <% @tweets.each do |t| %>
+    <td><%= t.user.screen_name %></td>
+    <td><%= t.text %></td>
+    <td>
+    <% if t.place.class != Twitter::NullObject %>
+      <%= "#{t.place.name}, #{t.place.country}" %>
+    <% end %>
+    </td>
+</tr>
+  <% end %>
+</table>
