@@ -2,7 +2,7 @@ $(document).ready(function() {
   $(".vote-trigger-show").on("click", function(event) {
     event.preventDefault();
     var recId = event.currentTarget.attributes[1].value;
-    var direction = event.currentTarget.attributes[3].value
+    var direction = event.currentTarget.attributes[3].value;
     $.ajax({
       method: 'PUT',
       url: '/recommendations/' + recId + '/' + direction,
@@ -22,13 +22,16 @@ $(document).ready(function() {
   $(".vote-trigger-index").on("click", function(event) {
     event.preventDefault();
     // debugger;
-    // $.ajax({
-    //   method: 'GET',
-    //   url: '/recommendations',
-      // success: function(){
+    var recId = event.currentTarget.attributes[1].value;
+    var direction = event.currentTarget.attributes[3].value;
+    $.ajaxSetup({ cache: false });
+    $.ajax({
+      method: 'PUT',
+      url: '/recommendations/' + recId + '/' + direction,
+      success: function(){
         $("#all-recs").load("/recommendations #all-recs");
-        debugger;
-    //   }
-    // });
+        // debugger;
+      }
+    });
   });
 });
