@@ -1,14 +1,16 @@
 <ul class="vote">
       <li>
-        <%= link_to '▲', '#', class: "upvote-rec",
+        <%= link_to '▲', '#', class: "vote-trigger-show",
           recommendation: @recommendation.id,
-          rating: @recommendation.score %>
+          rating: @recommendation.score,
+          direction: 'like' %>
       </li>
       <li class="update-rating-<%= @recommendation.id %>"><%= @recommendation.score %></li>
       <li>
-        <%= link_to '▼', '#', class: "downvote-rec",
+        <%= link_to '▼', '#', class: "vote-trigger-show",
           recommendation: @recommendation.id,
-          rating: @recommendation.score %>
+          rating: @recommendation.score,
+          direction: 'dislike' %>
       </li>
     </ul>
 
