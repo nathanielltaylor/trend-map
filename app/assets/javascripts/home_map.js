@@ -5,7 +5,6 @@ function initMap() {
     dataType: "json"
   })
   .done(function(data){
-    debugger;
     var userLocation = {lat: data[0], lng: data[1]};
 
     var map = new google.maps.Map(document.getElementById('map'), {
