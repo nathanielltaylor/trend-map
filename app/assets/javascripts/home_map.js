@@ -205,12 +205,12 @@ function initMap() {
 
     });
 
-    var tweets = data[2]
-    var trends = data[3]
+    var tweets = data[2];
+    var trends = data[3];
 
     tweets.forEach(function(tweet){
-        var lat = parseFloat(tweet.latitude)
-        var lng = parseFloat(tweet.longitude)
+        var lat = parseFloat(tweet.latitude);
+        var lng = parseFloat(tweet.longitude);
 
         var marker = new google.maps.Marker({
           position: {lat: lat, lng: lng},
@@ -227,8 +227,8 @@ function initMap() {
     });
 
     trends.forEach(function(trend){
-      var trendLat = parseFloat(trend.latitude)
-      var trendLng = parseFloat(trend.longitude)
+      var trendLat = parseFloat(trend.latitude);
+      var trendLng = parseFloat(trend.longitude);
 
       var trendMarker = new google.maps.Marker({
         position: { lat: trendLat, lng: trendLng},

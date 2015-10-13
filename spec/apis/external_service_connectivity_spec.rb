@@ -8,8 +8,9 @@ feature 'app is connected to multiple third party APIs', %{
 
   scenario "app connects to google geocoding API and returns lat and lng" do
     query = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=#{ENV["GOOGLE_GEOCODING"]}")
-    expect(query.first[1].first["geometry"]["location"]["lat"].round(2)).to eq(37.42)
-    expect(query.first[1].first["geometry"]["location"]["lng"].round(2)).to eq(-122.08)
+    location = query.first[1].first["geometry"]["location"]
+    expect(location["lat"].round(2)).to eq(37.42)
+    expect(location["lng"].round(2)).to eq(-122.08)
   end
 
   scenario "app connects to yahoo WOEID API and returns lat and lng" do

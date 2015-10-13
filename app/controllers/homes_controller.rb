@@ -41,7 +41,7 @@ class HomesController < ApplicationController
 
     #################
     sample_tweet = Tweet.first
-    if sample_tweet == nil || (sample_tweet != nil && ((sample_tweet.created_at + 3.minutes) < DateTime.now.utc))
+    if !sample_tweet.nil? || (sample_tweet != nil && ((sample_tweet.created_at + 3.minutes) < DateTime.now.utc))
       q = "geocode:39.5,-98.35,1500mi"
       all_tweets = client.search(q).take(50)
       if !all_tweets.nil?
@@ -77,7 +77,7 @@ class HomesController < ApplicationController
     #####################
 
     sample_trend = Trend.first
-    if sample_trend == nil || (sample_trend != nil && ((sample_trend.created_at + 20.minutes) < DateTime.now.utc))
+    if !sample_trend.nil? || (sample_trend != nil && ((sample_trend.created_at + 20.minutes) < DateTime.now.utc))
 
       trend_locations = []
       available_trends_response = api_get("https://api.twitter.com/1.1/trends/available.json")
