@@ -11,8 +11,10 @@
           rating: @recommendation.score %>
       </li>
     </ul>
-Submitted by <%= @recommendation.user.username %>
+<%= image_tag "trend.png" if @recommendation.trend_or_location == "Trend" %>
+<%= image_tag "location.png" if @recommendation.trend_or_location == "Location" %>
 <%= @recommendation.query %>
+Submitted by <%= @recommendation.user.username %>
 <%= @recommendation.trend_or_location %>
 <%= @recommendation.category %>
 <%= @recommendation.description if @recommendation.description %>

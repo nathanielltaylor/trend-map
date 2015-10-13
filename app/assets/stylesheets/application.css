@@ -35,3 +35,7 @@
 .trend-item {
   display: inline;
 }
+
+#user-search-list {
+  list-style: none;
+}

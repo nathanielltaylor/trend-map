@@ -1,3 +1,13 @@
+<% if params[:search] %>
+  <%= "Most recent tweets concerning #{params[:search]} (Trend)" %>
+  <%= image_tag "trend.png" %>
+<% elsif params[:location] %>
+  <%= "Most recent tweets near #{params[:location].titleize} (Location)" %>
+  <%= image_tag "location.png" %>
+<% elsif params[:local] %>
+  <%= "Local Tweets" %>
+  <%= image_tag "local_target.png" %>
+<% end %>
 <table>
 <tr>
   <th>User</th>
