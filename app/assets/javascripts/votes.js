@@ -19,9 +19,8 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
-  $(".vote-trigger-index").on("click", function(event) {
+  $('body').on("click", ".vote-trigger-index", function(event) {
     event.preventDefault();
-    // debugger;
     var recId = event.currentTarget.attributes[1].value;
     var direction = event.currentTarget.attributes[3].value;
     $.ajaxSetup({ cache: false });
@@ -30,7 +29,6 @@ $(document).ready(function() {
       url: '/recommendations/' + recId + '/' + direction,
       success: function(){
         $("#all-recs").load("/recommendations #all-recs");
-        // debugger;
       }
     });
   });
