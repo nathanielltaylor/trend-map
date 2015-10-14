@@ -14,7 +14,7 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 
 #### User Profiles
 - [X] User sign up and authentication
-- [ ] User is publicly identified only by username
+- [X] User is publicly identified only by username
 - [ ] Connection to Twitter*
 - [ ] Personalized user dashboard*
 
