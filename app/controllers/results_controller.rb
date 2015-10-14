@@ -1,17 +1,5 @@
 class ResultsController < ApplicationController
 
-  # class TemporaryTweet
-  #   attr_reader :author, :text, :lat, :lng, :has_location, :location
-  #   def initialize(author, text, lat, lng, has_location, location = nil)
-  #     author = author
-  #     @text = text
-  #     @lat = lat
-  #     @lng = lng
-  #     @has_location = has_location
-  #     @location = location
-  #   end
-  # end
-
   def index
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
@@ -22,7 +10,15 @@ class ResultsController < ApplicationController
 
     if params[:search].present?
       query = params[:search]
-      @tweets = client.search("##{query}").take(25)
+      @tweets = client.search("##{query}&geocode:39.5,-98.35,1500mi").take(25).delete_if { |t| t.place.class == Twitter::NullObject }
+      ave_lat = 0
+      ave_lng = 0
+      @tweets.each do |t|
+          ave_lat += t.geo.coordinates[0]
+          ave_lng += t.geo.coordinates[1]
+      end
+      @center = [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
+      @zoom_level = 4
 
       if current_user
         Search.create(
@@ -31,11 +27,6 @@ class ResultsController < ApplicationController
           user: current_user
           )
       end
-
-      # respond_to do |format|
-      #   format.html
-      #   format.json { render json: @tweets }
-      # end
 
     elsif params[:local].present?
       ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
@@ -53,6 +44,7 @@ class ResultsController < ApplicationController
           ave_lng += t.geo.coordinates[1]
       end
       @center = [(ave_lat / all_tweets.length), (ave_lng / all_tweets.length)]
+      @zoom_level = 13
 
 
       if current_user
@@ -63,14 +55,7 @@ class ResultsController < ApplicationController
           )
       end
 
-      # binding.pry
-
-      # respond_to do |format|
-      #   format.html
-      #   format.json { render json: @tweets }
-      # end
-
-    elsif params[:location]
+    elsif params[:location].present?
       location = params[:location]
       query = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{location}&key=#{ENV["GOOGLE_GEOCODING"]}")
       top_result = query.first[1].first
@@ -85,6 +70,7 @@ class ResultsController < ApplicationController
           ave_lng += t.geo.coordinates[1]
       end
       @center = [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
+      @zoom_level = 13
 
       place_name = top_result["address_components"].first["long_name"]
       if current_user
@@ -95,27 +81,13 @@ class ResultsController < ApplicationController
           )
       end
 
-      # respond_to do |format|
-      #   format.html
-      #   format.json { render json: @tweets }
-      # end
     end
 
     respond_to do |format|
       format.html
-      format.json { render json: [@tweets, @center] }
+      format.json { render json: [@tweets, @center, @zoom_level] }
     end
 
   end
 
 end
-
-
-# class TweetAssembler
-#   def self.create_json(tweets)
-#     ...
-#     ...
-#     ...
-#     ...
-#   end
-# end

@@ -15,7 +15,7 @@ function searchMap() {
 
     var map = new google.maps.Map(document.getElementById('search-map'), {
       center: {lat: lat, lng: lng},
-      zoom: 13,
+      zoom: data[2],
       minZoom: 4,
       styles: [
       {
