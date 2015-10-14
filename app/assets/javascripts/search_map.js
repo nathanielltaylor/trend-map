@@ -1,16 +1,22 @@
-function initSearchMap() {
+function searchMap() {
+  // get the current URL from the page
+  var currentPath = window.location.href.split('/')[3];
+  // debugger;
   $.ajax({
-    url: "/",
+    url: "/" + currentPath,
     method: 'GET',
     dataType: "json"
   })
   .done(function(data){
-    // var userLocation = {lat: data[0], lng: data[1]};
 
-    var map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 39.5, lng: -98.35},
-      zoom: 4,
-      minZoom: 2,
+    var tweets = data[0];
+    var lat = data[1][0];
+    var lng = data[1][1];
+
+    var map = new google.maps.Map(document.getElementById('search-map'), {
+      center: {lat: lat, lng: lng},
+      zoom: 13,
+      minZoom: 4,
       styles: [
       {
           "featureType": "water",
@@ -201,15 +207,11 @@ function initSearchMap() {
           ]
       }
       ]
-
     });
 
-    var tweets = data;
-    // var trends = data[3];
-
     tweets.forEach(function(tweet){
-        var lat = parseFloat(tweet.latitude);
-        var lng = parseFloat(tweet.longitude);
+        var lat = parseFloat(tweet.geo["coordinates"][0]);
+        var lng = parseFloat(tweet.geo["coordinates"][1]);
 
         var marker = new google.maps.Marker({
           position: {lat: lat, lng: lng},
@@ -224,37 +226,5 @@ function initSearchMap() {
           content: tweet.text
         });
     });
-
-    // trends.forEach(function(trend){
-    //   var trendLat = parseFloat(trend.latitude);
-    //   var trendLng = parseFloat(trend.longitude);
-    //
-    //   var trendMarker = new google.maps.Marker({
-    //     position: { lat: trendLat, lng: trendLng},
-    //     map: map,
-    //     title: 'Trend',
-    //     icon: '/assets/trends_maps.png'
-    //   })
-    //
-    //   trendMarker.addListener('click', function() {
-    //     trendInfowindow.open(map, trendMarker);
-    //   });
-    //   var trendInfowindow = new google.maps.InfoWindow({
-    //     content: trend.name
-    //   });
-    // });
-    //
-    // var marker = new google.maps.Marker({
-    //   position: userLocation,
-    //   map: map,
-    //   title: 'You are here'
-    // });
-    // marker.addListener('click', function() {
-    //   infowindow.open(map, marker);
-    // });
-    //
-    // var infowindow = new google.maps.InfoWindow({
-    //   content: 'You are here!'
-    // });
   });
 }
