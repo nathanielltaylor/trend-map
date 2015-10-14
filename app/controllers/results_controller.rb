@@ -8,16 +8,20 @@ class ResultsController < ApplicationController
       config.access_token_secret = ENV["TWITTER_ACCESS_SECRET"]
     end
 
-    if params[:search].present?
-      query = params[:search]
-      @tweets = client.search("##{query}&geocode:39.5,-98.35,1500mi").take(25).delete_if { |t| t.place.class == Twitter::NullObject }
+    def find_center(tweets)
       ave_lat = 0
       ave_lng = 0
       @tweets.each do |t|
           ave_lat += t.geo.coordinates[0]
           ave_lng += t.geo.coordinates[1]
       end
-      @center = [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
+      [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
+    end
+
+    if params[:search].present?
+      query = params[:search]
+      @tweets = client.search("##{query}&geocode:39.5,-98.35,1500mi").take(25).delete_if { |t| t.place.class == Twitter::NullObject }
+      @center = find_center(@tweets)
       @zoom_level = 4
 
       if current_user
@@ -32,18 +36,9 @@ class ResultsController < ApplicationController
       ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
       ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
       location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
-      q = "geocode:#{location.latitude},#{location.longitude},1mi"
-      all_tweets = client.search(q).take(25).delete_if { |t| t.place.class == Twitter::NullObject }
-
-      # TweetAssembler.create_json(all_tweets)
-      @tweets = all_tweets
-      ave_lat = 0
-      ave_lng = 0
-      all_tweets.each do |t|
-          ave_lat += t.geo.coordinates[0]
-          ave_lng += t.geo.coordinates[1]
-      end
-      @center = [(ave_lat / all_tweets.length), (ave_lng / all_tweets.length)]
+      q = "geocode:#{location.latitude},#{location.longitude},10mi"
+      @tweets = client.search(q).take(25).delete_if { |t| t.place.class == Twitter::NullObject }
+      @center = find_center(@tweets)
       @zoom_level = 13
 
 
@@ -63,13 +58,7 @@ class ResultsController < ApplicationController
       lng = top_result["geometry"]["location"]["lng"]
       q = "geocode:#{lat},#{lng},5mi"
       @tweets = client.search(q).take(25).delete_if { |t| t.place.class == Twitter::NullObject }
-      ave_lat = 0
-      ave_lng = 0
-      @tweets.each do |t|
-          ave_lat += t.geo.coordinates[0]
-          ave_lng += t.geo.coordinates[1]
-      end
-      @center = [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
+      @center = find_center(@tweets)
       @zoom_level = 13
 
       place_name = top_result["address_components"].first["long_name"]
