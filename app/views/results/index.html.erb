@@ -1,3 +1,4 @@
+<div id="search-map"></div>
 <table>
 <tr>
   <th>User</th>
@@ -6,13 +7,12 @@
 </tr>
 <tr>
   <% @tweets.each do |t| %>
-    <td><%= t.user.screen_name %></td>
+    <td><%= t.user.name %></td>
     <td><%= t.text %></td>
-    <td>
-    <% if t.place.class != Twitter::NullObject %>
-      <%= "#{t.place.name}, #{t.place.country}" %>
-    <% end %>
-    </td>
+    <td><%= t.place.name if t.place.class != Twitter::NullObject %></td>
 </tr>
   <% end %>
 </table>
+<script async defer
+src= <%= "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_GEOCODING"]}&callback=searchMap" %> >
+</script>
