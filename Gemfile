@@ -67,4 +67,4 @@ gem 'geoip'
 gem 'json'
 gem 'underscore-rails'
 gem 'poltergeist'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
