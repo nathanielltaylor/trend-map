@@ -1,29 +1,28 @@
 $(document).ready(function() {
-  $(".get-analysis").on("click", function(event) {
+  $("#get-analysis").on("click", function(event) {
     event.preventDefault();
     var currentPath = window.location.href.split('/')[3];
+    debugger;
     $.ajax({
-      method: 'PUT',
+      method: 'GET',
       url: '/' + currentPath,
-      success: function(data){
-        // if(data[2] === true){
-        //   $('.update-rating-' + data[0].id).html(
-        //     data[1]
-        //   )} else {
-        //     alert('Please sign in or create an account to vote!')
-        // };
+      dataType: 'json'
+    })
+      .done(function(data){
+        debugger;
         $.post(
-          'https://apiv2.indico.io/sentiment/batch?key=cab99168c35ae5ec855182e7b2a444e9',
+          'https://apiv2.indico.io/sentiment?key=cab99168c35ae5ec855182e7b2a444e9',
           {
             data: JSON.stringify({
-              'data': ["indico is so easy to use!", "everything is awesome!"]
+              'data': data[3][0]
             }),
-            success: function (data) {
-              console.log(data);
-            }
-          }
-        );
-      }
-    });
-  });
+          })
+          })
+      .done(function(data) {
+        debugger;
+        $('#get-analysis').html(data);
+      })
+  })
 });
+//   });
+// });
