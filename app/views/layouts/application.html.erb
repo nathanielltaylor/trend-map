@@ -47,12 +47,15 @@
         <li class="has-form">
           <div class="row collapse">
             <div class="large-8 small-9 columns">
-              <%= button_to "Suggested Searches", recommendations_path, class: "button", :method => :get %>
+              <%= button_to "Suggested Searches", recommendations_path, class: "button small", method: 'get' %>
             </div>
           </div>
         </li>
-
+        <li><%= form_tag(results_path, method: "get") do %>
+        <%= submit_tag "See Tweets Near Me", name: "local", class: "button small" %>
+        <% end %></li>
         <%- if current_user -%>
+          <li><%= link_to current_user.username, user_path(current_user) %></li>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
           <li><%= link_to 'Sign Up', new_user_registration_path %></li>
@@ -72,12 +75,10 @@
 
   <table width="70%" class="shareable"%>
   <tr>
-    <td><%= facebook_button %></td>
     <td><%= twitter_button %></td>
     <td><%= google_plus_button %></td>
     <td><%= linkedin_button %></td>
     <td><%= reddit_button %></td>
-    <td><%= tumblr_button %></td>
   </tr>
 </table>
 

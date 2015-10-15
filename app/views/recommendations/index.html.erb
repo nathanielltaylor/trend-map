@@ -33,7 +33,12 @@
           </li>
         </ul>
 
+    <%= image_tag "trend.png" if r.trend_or_location == "Trend" %>
+    <%= image_tag "location.png" if r.trend_or_location == "Location" %>
     <%= link_to r.query, recommendation_path(r) %>
+    <%= link_to "Search now!", results_path(search: r.query) if r.trend_or_location == "Trend" %>
+    <%= link_to "Search now!", results_path(location: r.query) if r.trend_or_location == "Location" %>
+    Submitted by <%= r.user.username %>
     <%= r.trend_or_location %>
     <%= r.category %>
     <%= r.description if r.description %>

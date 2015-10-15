@@ -1,10 +1,16 @@
-<%= @user.email %>
-<ul>
-<% @user.searches.each do |s| %>
+<h2><%= @user.username %></h2>
+<h4>Searches</h4>
+<ul id="user-search-list">
+<% @user.searches.reverse.each do |s| %>
   <% if s.trend_or_location == "Trend" %>
-  <li><a href="#">#<%= s.query %> (<%= s.trend_or_location %>)</li></a>
+  <li><%= image_tag "trend.png" %>
+  <%= link_to s.query, results_path(search: s.query) %></li>
   <% elsif s.trend_or_location == "Location" %>
-  <li><a href="#"><%= s.query %> (<%= s.trend_or_location %>)</li></a>
+  <li><%= image_tag "location.png" %>
+  <%= link_to s.query, results_path(location: s.query) %></li>
+  <% elsif s.trend_or_location == "Local" %>
+  <li><%= image_tag "local_target.png" %>
+  <%= link_to s.query, results_path(location: s.query) %></li>
   <% end %>
 <% end %>
 </ul>

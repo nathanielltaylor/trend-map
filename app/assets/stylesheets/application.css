@@ -36,6 +36,10 @@
   display: inline;
 }
 
+#user-search-list {
+  list-style: none;
+}
+
 #all-recs {
   transition-timing-function: ease;
 }

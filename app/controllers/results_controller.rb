@@ -1,6 +1,15 @@
 class ResultsController < ApplicationController
-
   def index
+    def check_previous(new_search)
+      previous = current_user.searches.all
+      previous.each do |s|
+        if s.query == new_search
+          return false
+        end
+        true
+      end
+    end
+
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
       config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
@@ -25,7 +34,7 @@ class ResultsController < ApplicationController
       @center = find_center(@tweets)
       @zoom_level = 4
 
-      if current_user
+      if current_user && check_previous(params[:search])
         Search.create(
           query: params[:search],
           trend_or_location: "Trend",
@@ -44,10 +53,10 @@ class ResultsController < ApplicationController
       @zoom_level = 13
 
 
-      if current_user
+      if current_user && check_previous(location.real_region_name)
         Search.create(
           query: location.real_region_name,
-          trend_or_location: "Location",
+          trend_or_location: "Local",
           user: current_user
           )
       end
@@ -65,7 +74,7 @@ class ResultsController < ApplicationController
       @zoom_level = 13
 
       place_name = top_result["address_components"].first["long_name"]
-      if current_user
+      if current_user && check_previous(place_name)
         Search.create(
           query: place_name,
           trend_or_location: "Location",
