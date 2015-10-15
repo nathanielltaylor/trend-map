@@ -16,8 +16,6 @@ feature 'user can search for location and search is saved to profile', %{
       click_button "Search"
     end
 
-    # expect(page).to have_content("San Francisco, United States", minimum: 10)
-
     visit user_path(@user)
     expect(page).to have_content("San Francisco")
 

@@ -16,8 +16,6 @@ feature 'user can search for trend and search is saved to profile', %{
       click_button "Search"
     end
 
-    # expect(page).to have_content("cats", minimum: 25)
-
     visit user_path(@user)
     expect(page).to have_content("cats")
 
