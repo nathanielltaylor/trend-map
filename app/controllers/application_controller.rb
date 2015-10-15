@@ -9,5 +9,4 @@ class ApplicationController < ActionController::Base
       u.permit(:email, :password, :username)
     end
   end
-
 end
