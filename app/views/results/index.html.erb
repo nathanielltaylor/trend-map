@@ -8,6 +8,11 @@
   <%= "Local Tweets" %>
   <%= image_tag "local_target.png" %>
 <% end %>
+<% if current_user %>
+<h4>The tweets represented here are <%= @sentiment %> positive.</h4>
+<% else %>
+<h6>Please sign in or create an account to see sentiment analysis information on these tweets.</h6>
+<% end %>
 <div id="search-map"></div>
 <table>
 <tr>
@@ -23,7 +28,6 @@
 </tr>
   <% end %>
 </table>
-<%= link_to 'Get Sentiment Analysis', '#', id: "get-analysis", class: "button" %>
 <%= link_to "Recommend this Search", new_recommendation_path, class: "button" %>
 <script async defer
 src= <%= "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_GEOCODING"]}&callback=searchMap" %> >

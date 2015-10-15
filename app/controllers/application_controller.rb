@@ -9,4 +9,16 @@ class ApplicationController < ActionController::Base
       u.permit(:email, :password, :username)
     end
   end
+
+  def get_analysis(tweets)
+    if current_user
+      Indico.api_key = ENV["INDICO"]
+      text = []
+      tweets.each { |t| text << t.text }
+      all = Indico.sentiment(text)
+      ((all.reduce(:+).to_f / all.size) * 100).round(2)
+    else
+      nil
+    end
+  end
 end

@@ -27,17 +27,11 @@ class ResultsController < ApplicationController
       config.access_token_secret = ENV["TWITTER_ACCESS_SECRET"]
     end
 
-    def just_text(tweets)
-      text = []
-      tweets.each { |t| text << t.text }
-      text
-    end
-
     if params[:search].present?
       query = params[:search]
       @tweets = client.search("##{query}&geocode:39.5,-98.35,1500mi").take(25)
       @tweets.delete_if { |t| t.place.class == Twitter::NullObject }
-      @raw_text = just_text(@tweets)
+      @sentiment = get_analysis(@tweets)
 
       @center = find_center(@tweets)
       @zoom_level = 4
@@ -57,7 +51,7 @@ class ResultsController < ApplicationController
       q = "geocode:#{location.latitude},#{location.longitude},10mi"
       @tweets = client.search(q).take(25)
       @tweets.delete_if { |t| t.place.class == Twitter::NullObject }
-      @raw_text = just_text(@tweets)
+      @sentiment = get_analysis(@tweets)
       @center = find_center(@tweets)
       @zoom_level = 13
 
@@ -79,7 +73,7 @@ class ResultsController < ApplicationController
       q = "geocode:#{lat},#{lng},5mi"
       @tweets = client.search(q).take(25)
       @tweets.delete_if { |t| t.place.class == Twitter::NullObject }
-      @raw_text = just_text(@tweets)
+      @sentiment = get_analysis(@tweets)
       @center = find_center(@tweets)
       @zoom_level = 13
 
@@ -95,7 +89,7 @@ class ResultsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render json: [@tweets, @center, @zoom_level, @raw_text] }
+      format.json { render json: [@tweets, @center, @zoom_level, @sentiment] }
     end
   end
 end
