@@ -1,7 +1,5 @@
 function searchMap() {
-  // get the current URL from the page
   var currentPath = window.location.href.split('/')[3];
-  // debugger;
   $.ajax({
     url: "/" + currentPath,
     method: 'GET',
