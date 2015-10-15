@@ -4,7 +4,7 @@
 <ul class="trends-list">
   <li>All Twitter Data (Trend Markers)</li>
   | <% @remote_trends.each do |r| %>
-  <li class="trend-item"><%= r.name %></li> |
+  <li class="trend-item"><%= link_to r.name, results_path(search: r.name) %></li> |
   <% end %>
 </ul>
 <% else %>
@@ -15,7 +15,7 @@
 <ul class="trends-list">
   <li>Currently Represented (In Tweet Markers)</li>
   | <% @local_trends.each do |l| %>
-  <li class="trend-item"><%= l %></li> |
+  <li class="trend-item"><%= link_to l, results_path(search: l) %></li> |
   <% end %>
 </ul>
 <% else %>

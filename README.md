@@ -30,7 +30,7 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] Trends searchable
 - [X] Locations searchable
 - [X] User searches are saved to personalize experience
-- [ ] User can delete searches permanently
+- [X] User can delete searches permanently
 - [ ] User can hide their searches from other users*
 - [ ] Advanced Search Form*
 
