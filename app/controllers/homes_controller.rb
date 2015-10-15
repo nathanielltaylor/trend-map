@@ -1,38 +1,5 @@
 class HomesController < ApplicationController
   def index
-    def consumer_key
-      OAuth::Consumer.new(
-        ENV["TWITTER_CONSUMER_KEY"],
-        ENV["TWITTER_CONSUMER_SECRET"]
-      )
-    end
-
-    def access_token
-      OAuth::Token.new(
-        ENV["TWITTER_ACCESS_TOKEN"],
-        ENV["TWITTER_ACCESS_SECRET"]
-      )
-    end
-
-    def api_get(url)
-      address = URI(url)
-      request = Net::HTTP::Get.new address.request_uri
-      http = Net::HTTP.new address.host, address.port
-      http.use_ssl = true
-      http.verify_mode = OpenSSL::SSL::VERIFY_PEER
-      request.oauth! http, consumer_key, access_token
-      http.start
-      response = http.request request
-      response
-    end
-
-    client = Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
-      config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
-      config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
-      config.access_token_secret = ENV["TWITTER_ACCESS_SECRET"]
-    end
-
     ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
     ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
     location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
@@ -42,7 +9,7 @@ class HomesController < ApplicationController
     sample_tweet = Tweet.first
     if sample_tweet.nil? || (!sample_tweet.nil? && ((sample_tweet.created_at + 3.minutes) < DateTime.now.utc))
       q = "geocode:39.5,-98.35,1500mi"
-      all_tweets = client.search(q).take(50)
+      all_tweets = CLIENT.search(q).take(50)
       if !all_tweets.nil?
         all_tweets.delete_if { |t| /(#|)(job|hiring|work)/i.match(t.text) }
         all_tweets.delete_if { |t| t.place.class == Twitter::NullObject }
