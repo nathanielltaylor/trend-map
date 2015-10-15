@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
-  resources :users
+  resources :users do
+    get "/destroy_all_searches" => "searches#destroy_all"
+  end
   resources :results, only: [:index, :show, :destroy]
   resources :tweets
+  resources :searches, only: [:destroy]
   resources :recommendations
   resources :recommendations, only: [:show] do
     member do
@@ -16,6 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
+  # get "/destroy_all_searches" => "searches#destroy_all"
   # get "/search" => "results#search"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

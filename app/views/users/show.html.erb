@@ -1,16 +1,19 @@
 <h2><%= @user.username %></h2>
 <h4>Searches</h4>
+<%= link_to 'Clear all Search History', user_destroy_all_searches_path(@user), class: "button" if current_user && @user.id == current_user.id %>
 <ul id="user-search-list">
 <% @user.searches.reverse.each do |s| %>
   <% if s.trend_or_location == "Trend" %>
   <li><%= image_tag "trend.png" %>
-  <%= link_to s.query, results_path(search: s.query) %></li>
+  <%= link_to s.query, results_path(search: s.query) %>
   <% elsif s.trend_or_location == "Location" %>
   <li><%= image_tag "location.png" %>
-  <%= link_to s.query, results_path(location: s.query) %></li>
+  <%= link_to s.query, results_path(location: s.query) %>
   <% elsif s.trend_or_location == "Local" %>
   <li><%= image_tag "local_target.png" %>
-  <%= link_to s.query, results_path(location: s.query) %></li>
+  <%= link_to s.query, results_path(location: s.query) %>
   <% end %>
+  <%= link_to 'Delete', search_path(id: s.id), method: :delete, class: "button small" if current_user && s.user_id == current_user.id %>
+  </li>
 <% end %>
 </ul>

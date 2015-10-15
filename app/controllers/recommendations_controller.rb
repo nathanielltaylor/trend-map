@@ -24,7 +24,7 @@ class RecommendationsController < ApplicationController
 
   def update
     @recommendation = Recommendation.find(params[:id])
-    if @recommendation.user_id == current_user.id
+    if current_user && @recommendation.user_id == current_user.id
       if @recommendation.update_attributes(recommendation_params)
         flash[:success] = 'Recommendation edited successfully'
         redirect_to recommendation_path(@recommendation)
@@ -55,7 +55,7 @@ class RecommendationsController < ApplicationController
 
   def destroy
     @recommendation = Recommendation.find(params[:id])
-    if @recommendation.user_id == current_user.id
+    if current_user && @recommendation.user_id == current_user.id
       @recommendation.destroy
       flash[:success] = 'Recommendation deleted'
       redirect_to recommendations_path
