@@ -44,7 +44,7 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] Trends stored in database for 20 minutes
 
 #### Sentiment analysis
-- [ ] By topic
-- [ ] By location
+- [X] By topic
+- [X] By location
 - [ ] Overall on homepage*
 - [ ] Visualized on heatmaps*
