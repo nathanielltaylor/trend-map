@@ -17,9 +17,22 @@ class ResultsController < ApplicationController
       config.access_token_secret = ENV["TWITTER_ACCESS_SECRET"]
     end
 
-    if params[:search]
+    def find_center(tweets)
+      ave_lat = 0
+      ave_lng = 0
+      tweets.each do |t|
+        ave_lat += t.geo.coordinates[0]
+        ave_lng += t.geo.coordinates[1]
+      end
+      [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
+    end
+
+    if params[:search].present?
       query = params[:search]
-      @tweets = client.search("##{query}").take(25)
+      @tweets = client.search("##{query}&geocode:39.5,-98.35,1500mi").take(25)
+      @tweets.delete_if { |t| t.place.class == Twitter::NullObject }
+      @center = find_center(@tweets)
+      @zoom_level = 4
 
       if current_user && check_previous(params[:search])
         Search.create(
@@ -29,12 +42,16 @@ class ResultsController < ApplicationController
           )
       end
 
-    elsif params[:local]
+    elsif params[:local].present?
       ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
       ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
       location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
-      q = "geocode:#{location.latitude},#{location.longitude},1mi"
+      q = "geocode:#{location.latitude},#{location.longitude},10mi"
       @tweets = client.search(q).take(25)
+      @tweets.delete_if { |t| t.place.class == Twitter::NullObject }
+      @center = find_center(@tweets)
+      @zoom_level = 13
+
 
       if current_user && check_previous(location.real_region_name)
         Search.create(
@@ -44,7 +61,7 @@ class ResultsController < ApplicationController
           )
       end
 
-    elsif params[:location]
+    elsif params[:location].present?
       location = params[:location]
       query = HTTParty.get("https://maps.googleapis.com/maps/api/geocode/json?address=#{location}&key=#{ENV["GOOGLE_GEOCODING"]}")
       top_result = query.first[1].first
@@ -52,6 +69,9 @@ class ResultsController < ApplicationController
       lng = top_result["geometry"]["location"]["lng"]
       q = "geocode:#{lat},#{lng},5mi"
       @tweets = client.search(q).take(25)
+      @tweets.delete_if { |t| t.place.class == Twitter::NullObject }
+      @center = find_center(@tweets)
+      @zoom_level = 13
 
       place_name = top_result["address_components"].first["long_name"]
       if current_user && check_previous(place_name)
@@ -61,6 +81,11 @@ class ResultsController < ApplicationController
           user: current_user
           )
       end
+    end
+
+    respond_to do |format|
+      format.html
+      format.json { render json: [@tweets, @center, @zoom_level] }
     end
   end
 end

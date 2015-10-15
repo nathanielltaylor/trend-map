@@ -13,20 +13,23 @@
   </div>
 </div>
 
+<div id="all-recs">
 <% @recommendations.each do |r| %>
   <div class="row panel">
 
     <ul class="vote">
           <li>
-            <%= link_to '▲', '#', class: "upvote-rec",
+            <%= link_to '▲', '#', class: "vote-trigger-index",
               recommendation: r.id,
-              rating: r.score %>
+              rating: r.score,
+              direction: 'like' %>
           </li>
           <li class="update-rating-<%= r.id %>"><%= r.score %></li>
           <li>
-            <%= link_to '▼', '#', class: "downvote-rec",
+            <%= link_to '▼', '#', class: "vote-trigger-index",
               recommendation: r.id,
-              rating: r.score %>
+              rating: r.score,
+              direction: 'dislike' %>
           </li>
         </ul>
 
@@ -41,6 +44,7 @@
     <%= r.description if r.description %>
   </div>
 <% end %>
+</div>
 
 <% if current_user %>
   <%= link_to "Suggest a New Search", new_recommendation_path, class: "button" %>

@@ -39,3 +39,12 @@
 #user-search-list {
   list-style: none;
 }
+
+#all-recs {
+  transition-timing-function: ease;
+}
+
+#search-map {
+  height: 85%;
+  width: 85%;
+}
