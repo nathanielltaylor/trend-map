@@ -10,7 +10,7 @@ feature 'recommendation index page shows all recommendations', %{
     FactoryGirl.create(:recommendation)
 
     visit root_path
-    click_button("Suggested Searches")
+    click_button("What Should I Search For?")
     expect(page).to have_content("Boston")
     expect(page).to have_content("Location")
     expect(page).to have_content("General")
