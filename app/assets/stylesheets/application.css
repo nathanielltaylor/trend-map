@@ -20,8 +20,8 @@
 }
 
 #map {
-  height: 85%;
-  width: 85%;
+  height: 90%;
+  width: 90%;
 }
 
 .vote {
@@ -45,6 +45,42 @@
 }
 
 #search-map {
-  height: 85%;
-  width: 85%;
+  height: 90%;
+  width: 90%;
+}
+
+.trends-panel {
+  margin: 1%;
+  text-align: center;
+}
+
+.shareable {
+  width: 70%;
+  margin-top: 1%;
+  border: none;
+}
+
+.align-table {
+  border: none;
+}
+
+.search-results-table {
+  margin-top: 1%;
+  border: none;
+}
+
+.search-header {
+  text-align: center;
+}
+
+.displayed-search {
+  margin: 1%;
+}
+
+.user-rec-panel {
+  margin-left: 1%;
+}
+
+.show-rec {
+  margin: 5%;
 }
