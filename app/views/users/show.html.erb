@@ -1,19 +1,63 @@
-<h2><%= @user.username %></h2>
-<h4>Searches</h4>
-<%= link_to 'Clear all Search History', user_destroy_all_searches_path(@user), class: "button" if current_user && @user.id == current_user.id %>
-<ul id="user-search-list">
-<% @user.searches.reverse.each do |s| %>
-  <% if s.trend_or_location == "Trend" %>
-  <li><%= image_tag "trend.png" %>
-  <%= link_to s.query, results_path(search: s.query) %>
-  <% elsif s.trend_or_location == "Location" %>
-  <li><%= image_tag "location.png" %>
-  <%= link_to s.query, results_path(location: s.query) %>
-  <% elsif s.trend_or_location == "Local" %>
-  <li><%= image_tag "local_target.png" %>
-  <%= link_to s.query, results_path(location: s.query) %>
-  <% end %>
-  <%= link_to 'Delete', search_path(id: s.id), method: :delete, class: "button small" if current_user && s.user_id == current_user.id %>
-  </li>
+<h2 class="search-header"><%= @user.username %></h2>
+<% if current_user && current_user == @user %>
+<div class="large-6 large-centered columns">
+  <table class="align-table">
+    <tr>
+      <td><%= form_tag(results_path, method: "get") { submit_tag "See Tweets Near Me", name: "local", class: "button" } %></td>
+      <td><%= link_to 'Clear all Search History', user_destroy_all_searches_path(@user), class: "button" %></td>
+      <td><%= button_to 'Sign Out', destroy_user_session_path, method: :delete, class: "button" %></td>
+    </tr>
+  </table>
+</div>
 <% end %>
-</ul>
+
+
+<div class="row">
+  <div class="large-5 columns">
+    <h4>Recent Searches</h4>
+    <ul id="user-search-list">
+      <% @user.searches.reverse.each do |s| %>
+      <div class="row panel">
+        <% if s.trend_or_location == "Trend" %>
+        <li><%= image_tag "trend.png" %>
+          <%= link_to s.query, results_path(search: s.query) %>
+          <% elsif s.trend_or_location == "Location" %>
+          <li><%= image_tag "location.png" %>
+            <%= link_to s.query, results_path(location: s.query) %>
+            <% elsif s.trend_or_location == "Local" %>
+            <li><%= image_tag "local_target.png" %>
+              <%= link_to s.query, results_path(location: s.query) %>
+              <% end %>
+              <%= link_to '(Delete)', search_path(id: s.id), method: :delete if current_user && s.user_id == current_user.id %>
+            </li>
+          </div>
+          <br>
+          <% end %>
+        </ul>
+      </div>
+
+      <div class="large-6 columns">
+        <div id="all-recs">
+          <h4>Recommendations Posted</h4>
+          <% @user.recommendations.sort_by { |rec| rec.score }.reverse.each do |r| %>
+          <div class="row panel user-rec-panel">
+            <%= image_tag "trend.png" if r.trend_or_location == "Trend" %>
+            <%= image_tag "location.png" if r.trend_or_location == "Location" %>
+            <%= link_to r.query, recommendation_path(r) %>
+            <br>
+            <%= r.trend_or_location %>
+            <br>
+            <%= r.category %>
+            <br>
+            <%= link_to "Search now!", results_path(search: r.query) if r.trend_or_location == "Trend" %>
+            <%= link_to "Search now!", results_path(location: r.query) if r.trend_or_location == "Location" %>
+            <br>
+            Submitted by <%= r.user.username %>
+            <br>
+            <%= r.description if r.description %>
+          </div>
+          <br>
+          <% end %>
+        </div>
+      </div>
+    </div>

@@ -1,18 +1,21 @@
+<h3 class="search-header">
 <% if params[:search] %>
-  <%= "Most recent tweets concerning #{params[:search]} (Trend)" %>
   <%= image_tag "trend.png" %>
+  <%= "Most Recent Tweets Concerning #{params[:search].titleize}" %>
 <% elsif params[:location] %>
-  <%= "Most recent tweets near #{params[:location].titleize} (Location)" %>
   <%= image_tag "location.png" %>
+  <%= "Most Recent Tweets Near #{params[:location].titleize}" %>
 <% elsif params[:local] %>
-  <%= "Local Tweets" %>
   <%= image_tag "local_target.png" %>
+  <%= "Your Local Tweets" %>
 <% end %>
-<div id="search-map"></div>
-<table>
+</h3>
+<div id="search-map" class="large-centered columns"></div>
+<div class="large-10 large-centered columns">
+<table class="search-results-table">
 <tr>
   <th>User</th>
-  <th>Content</th>
+  <th>Tweet</th>
   <th>Location</th>
 </tr>
 <tr>
@@ -23,7 +26,10 @@
 </tr>
   <% end %>
 </table>
+</div>
+<div class="large-3 large-centered columns">
 <%= link_to "Recommend this Search", new_recommendation_path, class: "button" %>
+</div>
 <script async defer
 src= <%= "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_GEOCODING"]}&callback=searchMap" %> >
 </script>

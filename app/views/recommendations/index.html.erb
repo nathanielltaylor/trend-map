@@ -1,4 +1,4 @@
-<h1>Recommended Searches</h1>
+<h2 class="search-header">User-Recommended Searches</h2>
 
 <div class="row">
   <div class="large-8 large-centered columns">
@@ -7,7 +7,11 @@
         <%= text_field_tag :user_search, params[:user_search], placeholder: "Search Suggestions" %>
         <%= select_tag :trend_or_location, options_for_select([nil, 'Trend', 'Location']) %>
         <%= select_tag :category, options_for_select([nil, 'General', 'Politics and Religion', 'Business and Economics', 'Science and Technology', 'Sports and Entertainment']) %>
+        <div class="row">
+          <div class="large-3 large-centered columns">
         <%= submit_tag "Search", name: nil, class: "button" %>
+      </div>
+    </div>
       <% end %>
     </span>
   </div>
@@ -15,8 +19,8 @@
 
 <div id="all-recs">
 <% @recommendations.each do |r| %>
-  <div class="row panel">
-
+  <div class="row panel callout large-6 large-centered columns">
+  <div class="large-2 columns">
     <ul class="vote">
           <li>
             <%= link_to '▲', '#', class: "vote-trigger-index",
@@ -32,20 +36,27 @@
               direction: 'dislike' %>
           </li>
         </ul>
-
+    </div>
+    <div class="large-8 columns end">
     <%= image_tag "trend.png" if r.trend_or_location == "Trend" %>
     <%= image_tag "location.png" if r.trend_or_location == "Location" %>
     <%= link_to r.query, recommendation_path(r) %>
+    <br>
     <%= link_to "Search now!", results_path(search: r.query) if r.trend_or_location == "Trend" %>
     <%= link_to "Search now!", results_path(location: r.query) if r.trend_or_location == "Location" %>
-    Submitted by <%= r.user.username %>
-    <%= r.trend_or_location %>
-    <%= r.category %>
+    <br>
+    Submitted by <%= r.user.username %>.
+    <%= r.trend_or_location %>.
+    <%= r.category %>.
     <%= r.description if r.description %>
-  </div>
-<% end %>
 </div>
+</div>
+<% end %>
 
+<div class="row">
+  <div class="large-4 large-centered columns">
 <% if current_user %>
   <%= link_to "Suggest a New Search", new_recommendation_path, class: "button" %>
 <% end %>
+</div>
+</div>

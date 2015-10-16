@@ -49,11 +49,15 @@ class ApplicationController < ActionController::Base
   def find_center(tweets)
     ave_lat = 0
     ave_lng = 0
-    tweets.each do |t|
-      ave_lat += t.geo.coordinates[0]
-      ave_lng += t.geo.coordinates[1]
+    if tweets.length > 0
+      tweets.each do |t|
+        ave_lat += t.geo.coordinates[0]
+        ave_lng += t.geo.coordinates[1]
+      end
+      return [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
+    else
+      nil
     end
-    [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
   end
 
   CLIENT = Twitter::REST::Client.new do |config|

@@ -1,13 +1,11 @@
 <% if current_user && current_user.id == @recommendation.user_id %>
   <div class="large-8 large-centered columns text-center">
-    <h1>Edit your suggestion</h1>
+    <h1>Edit Your Suggestion</h1>
   </div>
   <%= render 'form' %><br />
-  <div class="large-6 large-centered columns ">
-    <div class="large-12 columns">
+    <div class="large-2 large-centered columns">
       <%= link_to 'Delete', recommendation_path, method: :delete, class: "button alert expand" %>
     </div>
-  </div>
 <% else %>
  <p>You do not have permission to edit this suggestion</p>
 <% end %>
