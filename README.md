@@ -14,15 +14,13 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 #### User Profiles
 - [X] User sign up and authentication
 - [X] User is publicly identified only by username
-- [ ] Connection to Twitter*
-- [ ] Personalized user dashboard*
+- [ ] Personalized user dashboard based on connected Twitter account*
 
 #### Mapping
 - [X] Interactive map
 - [X] Tweets superimposed on map
 - [X] Trends superimposed on map
 - [X] Fully JavaScript overlays
-- [ ] Sentiment analysis maps*
 - [ ] User location maps*
 
 #### Data Querying
@@ -30,7 +28,7 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] Locations searchable
 - [X] User searches are saved to personalize experience
 - [X] User can delete searches permanently
-- [ ] User can hide their searches from other users*
+- [ ] User can hide their searches from other users without deleting them*
 - [ ] Advanced Search Form*
 
 #### Recommendation Features
