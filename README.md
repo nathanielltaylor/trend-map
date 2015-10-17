@@ -49,7 +49,6 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [ ] Visualized on heatmaps*
 
 ##### Original Icon Design Credits
-trend by Daouna Jeong from the Noun Project
-trend by Ryo Sato from the Noun Project. hashtag by juan manjarrez from the Noun Project
-hashtag by matthew hall from the Noun Project. Location by Creative Stall from the Noun Project.
-Target by luc vega from the Noun Project
+"trend" by Daouna Jeong from the Noun Project.
+"trend" by Ryo Sato from the Noun Project. "hashtag" by juan manjarrez from the Noun Project.
+"hashtag" by matthew hall from the Noun Project. "Location" by Creative Stall from the Noun Project. "Target" by luc vega from the Noun Project.
