@@ -16,4 +16,10 @@ FactoryGirl.define do
     association :user
   end
 
+  factory :search do
+    query "Lima"
+    trend_or_location "Location"
+    association :user
+  end
+
 end

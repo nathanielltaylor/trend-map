@@ -20,7 +20,7 @@
     <div class="large-6 columns">
       <%= image_tag "trend.png" if @recommendation.trend_or_location == "Trend" %>
       <%= image_tag "location.png" if @recommendation.trend_or_location == "Location" %>
-      <strong><%= @recommendation.query %></strong>
+      <%= @recommendation.query %>
       <br>
       <%= link_to "Search now!", results_path(search: @recommendation.query) if @recommendation.trend_or_location == "Trend" %>
       <%= link_to "Search now!", results_path(location: @recommendation.query) if @recommendation.trend_or_location == "Location" %>

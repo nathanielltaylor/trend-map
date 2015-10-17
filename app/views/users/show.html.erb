@@ -16,16 +16,16 @@
   <div class="large-5 columns">
     <h4>Recent Searches</h4>
     <ul id="user-search-list">
-      <% @user.searches.reverse.each do |s| %>
+      <% @searches.each do |s| %>
       <div class="row panel">
         <% if s.trend_or_location == "Trend" %>
-        <li><%= image_tag "trend.png" %>
+        <li id="search-<%= s.id %>"><%= image_tag "trend.png" %>
           <%= link_to s.query, results_path(search: s.query) %>
           <% elsif s.trend_or_location == "Location" %>
-          <li><%= image_tag "location.png" %>
+          <li id="search-<%= s.id %>"><%= image_tag "location.png" %>
             <%= link_to s.query, results_path(location: s.query) %>
             <% elsif s.trend_or_location == "Local" %>
-            <li><%= image_tag "local_target.png" %>
+            <li id="search-<%= s.id %>"><%= image_tag "local_target.png" %>
               <%= link_to s.query, results_path(location: s.query) %>
               <% end %>
               <%= link_to '(Delete)', search_path(id: s.id), method: :delete if current_user && s.user_id == current_user.id %>
@@ -39,7 +39,7 @@
       <div class="large-6 columns">
         <div id="all-recs">
           <h4>Recommendations Posted</h4>
-          <% @user.recommendations.sort_by { |rec| rec.score }.reverse.each do |r| %>
+          <% @recommendations.each do |r| %>
           <div class="row panel user-rec-panel">
             <%= image_tag "trend.png" if r.trend_or_location == "Trend" %>
             <%= image_tag "location.png" if r.trend_or_location == "Location" %>

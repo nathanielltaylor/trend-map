@@ -4,11 +4,11 @@ Rails.application.routes.draw do
   resources :users do
     get "/destroy_all_searches" => "searches#destroy_all"
   end
-  resources :results, only: [:index, :show, :destroy]
+  resources :results, only: [:index]
   resources :tweets
   resources :searches, only: [:destroy]
   resources :recommendations
-  resources :recommendations, only: [:show] do
+  resources :recommendations, only: [:show, :index] do
     member do
       put "like", to: "recommendations#upvote", defaults: {
         format: 'json'

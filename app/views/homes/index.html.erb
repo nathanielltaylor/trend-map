@@ -1,28 +1,28 @@
 <div class="large-6 large-centered columns">
-<div class="panel callout trends-panel">
-<h5>Current Trends in the US</h5>
-<% if @remote_trends.any? %>
-<ul class="trends-list">
-  <li>All Twitter Data (Trend Markers)</li>
-  | <% @remote_trends.each do |r| %>
-  <li class="trend-item"><%= link_to r.name, results_path(search: r.name) %></li> |
-  <% end %>
-</ul>
-<% else %>
-<p>No trending topics could be found. This probably indicates a problem connecting to Twitter's servers. Please check back later.</p>
-<% end %>
+  <div class="panel callout trends-panel">
+    <h5>Current Trends in the US</h5>
+    <% if @remote_trends.any? %>
+    <ul class="trends-list">
+      <li>All Twitter Data (Trend Markers)</li>
+      | <% @remote_trends.each do |r| %>
+      <li class="trend-item"><%= link_to r.name, results_path(search: r.name) %></li> |
+      <% end %>
+    </ul>
+    <% else %>
+    <p>No trending topics could be found. This probably indicates a problem connecting to Twitter's servers. Please check back later.</p>
+    <% end %>
 
-<% if @local_trends.any? %>
-<ul class="trends-list">
-  <li>Currently Represented (In Tweet Markers)</li>
-  | <% @local_trends.each do |l| %>
-  <li class="trend-item"><%= link_to l, results_path(search: l) %></li> |
-  <% end %>
-</ul>
-<% else %>
-<p>No patterns are currently discernible from the tweets represented here.</p>
-<% end %>
-</div>
+    <% if @local_trends.any? %>
+    <ul class="trends-list">
+      <li>Currently Represented (In Tweet Markers)</li>
+      | <% @local_trends.each do |l| %>
+      <li class="trend-item"><%= link_to l, results_path(search: l) %></li> |
+      <% end %>
+    </ul>
+    <% else %>
+    <p>No patterns are currently discernible from the tweets represented here.</p>
+    <% end %>
+  </div>
 </div>
 
 <div class="large-4 large-centered columns">
@@ -34,11 +34,11 @@
       <td>
         <%= button_to "What Should I Search For?", recommendations_path, method: 'get', class: "button" %>
       </td>
-    <tr>
-  </table>
-</div>
+      <tr>
+      </table>
+    </div>
 
-<div id="map" class="large-centered columns"></div>
-<script async defer
-src= <%= "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_GEOCODING"]}&callback=initMap" %> >
-</script>
+    <div id="map" class="large-centered columns"></div>
+    <script async defer
+    src= <%= "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_GEOCODING"]}&callback=initMap" %> >
+    </script>

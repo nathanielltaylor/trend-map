@@ -6,26 +6,25 @@ feature 'user can edit recommendation', %{
   So that I can fix any mistakes I made while entering the form
 } do
 
-  # scenario "user edits recommendation" do
-  #   @user = FactoryGirl.create(:user)
-  #   login(@user)
-  #   FactoryGirl.create(:recommendation, user: @user)
-  #
-  #   visit recommendations_path
-  #   click_link "Boston"
-  #   click_link "Edit Suggestion"
-  #   fill_in "Query", with: "Syria"
-  #   select "Trend", from: "Trend or location"
-  #   select "Politics and Religion", from: "Category"
-  #   fill_in "Description", with: "tweets from the frontlines"
-  #   click_button "Submit"
-  #
-  #   expect(page).to have_content("Syria")
-  #   expect(page).to have_content("Trend ")
-  #   expect(page).to have_content("Politics and Religion")
-  #   expect(page).to have_content("tweets from the frontlines")
-  #
-  # end
+  scenario "user edits recommendation", faulty: true do
+    @user = FactoryGirl.create(:user)
+    FactoryGirl.create(:recommendation, user: @user)
+    login(@user)
+
+    visit recommendations_path
+    click_link "Boston"
+    click_link "Edit Suggestion"
+    fill_in "Query", with: "Syria"
+    select "Trend", from: "Trend or location"
+    select "Politics and Religion", from: "Category"
+    fill_in "Description", with: "tweets from the frontlines"
+    click_button "Submit"
+
+    expect(page).to have_content("Syria")
+    expect(page).to have_content("Trend ")
+    expect(page).to have_content("Politics and Religion")
+    expect(page).to have_content("tweets from the frontlines")
+  end
 
 end
 

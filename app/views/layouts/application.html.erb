@@ -46,33 +46,34 @@
           </div>
         </li>
         <%- if current_user -%>
-          <li><%= link_to current_user.username, user_path(current_user) %></li>
+        <li><%= link_to current_user.username, user_path(current_user) %></li>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Sign In', new_user_session_path %></li>
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <li><%= link_to 'Sign In', new_user_session_path %></li>
         <%- end -%>
       </ul>
     </section>
   </nav>
 
   <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
+  <div class="flash flash-<%= key %>">
+    <%= value %>
+  </div>
   <%- end -%>
 
   <%= yield %>
 
   <table class="shareable large-centered columns"%>
-  <tr>
-    <td><%= facebook_button %></td>
-    <td><%= twitter_button %></td>
-    <td><%= google_plus_button %></td>
-    <td><%= linkedin_button %></td>
-    <td><%= reddit_button %></td>
-    <td><%= tumblr_button %></td>
-  </tr>
-</table>
+    <tr>
+      <td><%= facebook_button %></td>
+      <td><%= twitter_button %></td>
+      <td><%= google_plus_button %></td>
+      <td><%= linkedin_button %></td>
+      <td><%= reddit_button %></td>
+      <td><%= tumblr_button %></td>
+    </tr>
+  </table>
+  <p class="search-header"><%= link_to "See this on GitHub", "https://github.com/nathanielltaylor/tweetmaps" %></p>
 
   <%= yield :extra_footer %>
 </body>

@@ -1,6 +1,5 @@
 ![Build Status](https://codeship.com/projects/c042def0-4cf7-0133-5535-566112b803ab/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/nathanielltaylor/trend-map.png)
-![Coverage Status](https://coveralls.io/repos/nathanielltaylor/trend-map/badge.png)
 
 ## TweetMaps
 
@@ -48,3 +47,9 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [ ] By location
 - [ ] Overall on homepage*
 - [ ] Visualized on heatmaps*
+
+##### Original Icon Design Credits
+trend by Daouna Jeong from the Noun Project
+trend by Ryo Sato from the Noun Project. hashtag by juan manjarrez from the Noun Project
+hashtag by matthew hall from the Noun Project. Location by Creative Stall from the Noun Project.
+Target by luc vega from the Noun Project

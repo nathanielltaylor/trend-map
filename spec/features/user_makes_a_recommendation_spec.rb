@@ -25,17 +25,21 @@ feature 'user can add new recommendation', %{
     expect(page).to have_content("I want to know everything about the Pope!!!")
   end
 
-  # scenario "users leaves required recommendation fields blank" do
-  #   @user = FactoryGirl.create(:user)
-  #   login(@user)
-  #
-  #   visit recommendations_path
-  #   click_link("Suggest a New Search")
-  #
-  #   click_button "Submit"
-  #
-  #   expect(page).to have_content("Query can't be blank")
-  # end
+  scenario "users leaves required recommendation fields blank", js: true, faulty: true do
+    @user = FactoryGirl.create(:user)
+    login(@user)
+
+    visit recommendations_path
+    click_link("Suggest a New Search")
+    # page.find("#new-rec-button").trigger("click")
+
+    within("#rec-form-submit") do
+      click_button "Submit"
+    end
+    # page.find("#rec-form-submit").trigger("click")
+
+    expect(page).to have_content("Query can't be blank")
+  end
 
   scenario "signed out visitor cannot create recommendation" do
     visit recommendations_path

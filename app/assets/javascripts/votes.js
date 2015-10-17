@@ -23,12 +23,13 @@ $(document).ready(function() {
     event.preventDefault();
     var recId = event.currentTarget.attributes[1].value;
     var direction = event.currentTarget.attributes[3].value;
+    var currentPath = window.location.href.split('/')[3];
     $.ajaxSetup({ cache: false });
     $.ajax({
       method: 'PUT',
       url: '/recommendations/' + recId + '/' + direction,
       success: function(){
-        $("#all-recs").load("/recommendations #all-recs");
+        $("#all-recs").load("/" + currentPath + " #all-recs");
       }
     });
   });

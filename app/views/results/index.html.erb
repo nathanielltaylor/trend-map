@@ -1,31 +1,31 @@
 <h3 class="search-header">
 <% if params[:search] %>
-  <%= image_tag "trend.png" %>
-  <%= "Most Recent Tweets Concerning #{params[:search].titleize}" %>
+<%= image_tag "trend.png" %>
+<%= "Most Recent Tweets Concerning #{params[:search].titleize}" %>
 <% elsif params[:location] %>
-  <%= image_tag "location.png" %>
-  <%= "Most Recent Tweets Near #{params[:location].titleize}" %>
+<%= image_tag "location.png" %>
+<%= "Most Recent Tweets Near #{params[:location].titleize}" %>
 <% elsif params[:local] %>
-  <%= image_tag "local_target.png" %>
-  <%= "Your Local Tweets" %>
+<%= image_tag "local_target.png" %>
+<%= "Your Local Tweets" %>
 <% end %>
 </h3>
 <div id="search-map" class="large-centered columns"></div>
 <div class="large-10 large-centered columns">
-<table class="search-results-table">
-<tr>
-  <th>User</th>
-  <th>Tweet</th>
-  <th>Location</th>
-</tr>
-<tr>
-  <% @tweets.each do |t| %>
-    <td><%= t.user.name %></td>
-    <td><%= t.text %></td>
-    <td><%= t.place.name if t.place.class != Twitter::NullObject %></td>
-</tr>
-  <% end %>
-</table>
+  <table class="search-results-table">
+    <tr>
+      <th>User</th>
+      <th>Tweet</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <% @tweets.each do |t| %>
+      <td><%= t.user.name %></td>
+      <td><%= t.text %></td>
+      <td><%= t.place.name if t.place.class != Twitter::NullObject %></td>
+    </tr>
+    <% end %>
+  </table>
 </div>
 <div class="large-3 large-centered columns">
 <%= link_to "Recommend this Search", new_recommendation_path, class: "button" %>

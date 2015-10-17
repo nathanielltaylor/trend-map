@@ -1,12 +1,4 @@
 class SearchesController < ApplicationController
-  def index
-    @searches = Search.all
-  end
-
-  def show
-    @search = Search.find(params[:id])
-  end
-
   def destroy
     @search = Search.find(params[:id])
     if current_user && @search.user_id == current_user.id
