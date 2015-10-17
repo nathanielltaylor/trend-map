@@ -29,7 +29,6 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] User searches are saved to personalize experience
 - [X] User can delete searches permanently
 - [ ] User can hide their searches from other users without deleting them*
-- [ ] Advanced Search Form*
 
 #### Recommendation Features
 - [X] Ability to add recommended queries
@@ -41,12 +40,10 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] Trends stored in database for 20 minutes
 
 #### Sentiment analysis
-- [ ] By topic
-- [ ] By location
-- [ ] Overall on homepage*
+- [X] By topic
+- [X] By location
+- [ ] Overall analysis on homepage*
 - [ ] Visualized on heatmaps*
 
 ##### Original Icon Design Credits
-"trend" by Daouna Jeong from the Noun Project.
-"trend" by Ryo Sato from the Noun Project. "hashtag" by juan manjarrez from the Noun Project.
-"hashtag" by matthew hall from the Noun Project. "Location" by Creative Stall from the Noun Project. "Target" by luc vega from the Noun Project.
+"trend" by Daouna Jeong. "trend" by Ryo Sato. "hashtag" by juan manjarrez. "hashtag" by matthew hall. "Location" by Creative Stall. "Target" by luc vega. "Smile", "displeased", and "Sad" by Golden Roof. All from the Noun Project.

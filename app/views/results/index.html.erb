@@ -10,6 +10,15 @@
 <%= "Your Local Tweets" %>
 <% end %>
 </h3>
+<% if current_user %>
+<h4 class="search-header">
+<%= image_tag @face if @face %>
+The tweets represented here are <%= @sentiment %> positive.
+<%= image_tag @face if @face %>
+</h4>
+<% else %>
+<h6 class="search-header">Please sign in or create an account to see sentiment analysis information on these tweets.</h6>
+<% end %>
 <div id="search-map" class="large-centered columns"></div>
 <div class="large-10 large-centered columns">
   <table class="search-results-table">

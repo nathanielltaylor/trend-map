@@ -68,4 +68,5 @@ gem 'json'
 gem 'underscore-rails'
 gem 'poltergeist'
 gem 'vcr'
+gem 'indico'
 gem 'rails_12factor', group: :production
