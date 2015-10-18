@@ -3,11 +3,11 @@
 
 ## TweetMaps
 
-An interactive mapping app that provides a handy, visual interface to Twitter data on what people are talking about where and, more importantly, how they feel about it.
+An interactive mapping app that provides a handy, visual interface to Twitter data on what people are talking about where and how they feel about it.
 
 ## Features
 
-[Trello board](https://trello.com/b/PmEn0OA2/trend-map)(currently private)
+[Trello board](https://trello.com/b/PmEn0OA2/trend-map) (currently private)
 
 (Starred features are under consideration)
 
@@ -44,6 +44,8 @@ An interactive mapping app that provides a handy, visual interface to Twitter da
 - [X] By location
 - [ ] Overall analysis on homepage*
 - [ ] Visualized on heatmaps*
+
+Next goal: Try to implement Google-powered translation of tweets
 
 ##### Original Icon Design Credits
 "trend" by Daouna Jeong. "trend" by Ryo Sato. "hashtag" by juan manjarrez. "hashtag" by matthew hall. "Location" by Creative Stall. "Target" by luc vega. "Smile", "displeased", and "Sad" by Golden Roof. All from the Noun Project.
