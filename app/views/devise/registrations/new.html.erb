@@ -7,11 +7,13 @@
   <div class="field">
     <%= f.label :username %><br />
     <%= f.text_field :username, autofocus: true %>
+    <p>This is the only way that other users will be able to identify you. If you wish to remain anonymous, please do not use your real name.</p>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
+    <p>Your email will never be shared with other users.</p>
   </div>
 
   <div class="field">

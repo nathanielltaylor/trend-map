@@ -39,6 +39,10 @@
     </div>
 
     <div id="map" class="large-centered columns"></div>
+    <% if current_user %>
+    <br>
+    <p class="search-header">Please note that all searches made while signed in will be saved to your profile and are visible to other users. Please navigate to your <%= link_to "profile", user_path(current_user) %> to clear your history.<p>
+    <% end %>
     <script async defer
     src= <%= "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_GEOCODING"]}&callback=initMap" %> >
     </script>
