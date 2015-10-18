@@ -72,6 +72,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def find_user
+    ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
+    ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
+    GeoIP.new('GeoLiteCity.dat').city(ip_address)
+  end
+
   CLIENT = Twitter::REST::Client.new do |config|
     config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
     config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]

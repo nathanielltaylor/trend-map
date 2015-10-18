@@ -4,7 +4,6 @@ class ResultsController < ApplicationController
       query = params[:search]
       q = "#{query}&geocode:39.5,-98.35,1500mi"
       @zoom_level = 4
-
       if current_user && check_previous(params[:search])
         Search.create(
           query: params[:search],
@@ -14,13 +13,9 @@ class ResultsController < ApplicationController
       end
 
     elsif params[:local].present?
-      ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
-      ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
-      location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
+      location = find_user
       q = "geocode:#{location.latitude},#{location.longitude},10mi"
       @zoom_level = 13
-
-
       if current_user && check_previous(location.real_region_name)
         Search.create(
           query: location.real_region_name,
@@ -37,7 +32,6 @@ class ResultsController < ApplicationController
       lng = top_result["geometry"]["location"]["lng"]
       q = "geocode:#{lat},#{lng},5mi"
       @zoom_level = 13
-
       place_name = top_result["address_components"].first["long_name"]
       if current_user && check_previous(place_name)
         Search.create(
