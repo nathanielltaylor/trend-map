@@ -74,7 +74,7 @@ class ApplicationController < ActionController::Base
 
   def find_user
     ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
-    ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
+    ip_address = "69.168.242.44" if Rails.env.test? || Rails.env.development?
     GeoIP.new('GeoLiteCity.dat').city(ip_address)
   end
 

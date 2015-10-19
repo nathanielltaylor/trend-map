@@ -55,6 +55,7 @@ class ResultsController < ApplicationController
       end
     end
     @center = find_center(@tweets)
+    # refactor all this into poro that takes array of tweets on initialization
 
     respond_to do |format|
       format.html

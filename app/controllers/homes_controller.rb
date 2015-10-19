@@ -38,6 +38,8 @@ class HomesController < ApplicationController
       @local_trends = common_words
     end
 
+    #this could be method of poro that takes all tweets
+
     sample_trend = Trend.first
     if sample_trend.nil? || (!sample_trend.nil? && ((sample_trend.created_at + 20.minutes) < DateTime.now.utc))
 
