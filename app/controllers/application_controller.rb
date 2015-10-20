@@ -46,30 +46,10 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def find_center(tweets)
-    ave_lat = 0
-    ave_lng = 0
-    if tweets.length > 0
-      tweets.each do |t|
-        ave_lat += t.geo.coordinates[0]
-        ave_lng += t.geo.coordinates[1]
-      end
-      return [(ave_lat / @tweets.length), (ave_lng / @tweets.length)]
-    else
-      nil
-    end
-  end
-
-  def get_analysis(tweets)
-    if current_user
-      Indico.api_key = ENV["INDICO"]
-      text = []
-      tweets.each { |t| text << t.text }
-      all = Indico.sentiment(text)
-      ((all.reduce(:+).to_f / all.size) * 100).round(2)
-    else
-      nil
-    end
+  def find_user
+    ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
+    ip_address = "69.168.242.44" if Rails.env.test? || Rails.env.development?
+    GeoIP.new('GeoLiteCity.dat').city(ip_address)
   end
 
   CLIENT = Twitter::REST::Client.new do |config|

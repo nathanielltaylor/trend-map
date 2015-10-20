@@ -1,20 +1,18 @@
 class HomesController < ApplicationController
   def index
-    ip_address = request.remote_ip unless Rails.env.test? || Rails.env.development?
-    ip_address = "50.241.127.209" if Rails.env.test? || Rails.env.development?
-    location = GeoIP.new('GeoLiteCity.dat').city(ip_address)
+    location = find_user
     @lat = location.latitude
     @lng = location.longitude
 
     sample_tweet = Tweet.first
     if sample_tweet.nil? || (!sample_tweet.nil? && ((sample_tweet.created_at + 3.minutes) < DateTime.now.utc))
       q = "geocode:39.5,-98.35,1500mi"
-      all_tweets = CLIENT.search(q).take(50)
-      if !all_tweets.nil?
-        all_tweets.delete_if { |t| /(#|)(job|hiring|work)/i.match(t.text) }
-        all_tweets.delete_if { |t| t.place.class == Twitter::NullObject }
+      tweets = CLIENT.search(q).take(50)
+      if !tweets.nil?
+        tweets.delete_if { |t| /(#|)(job|hiring|work)/i.match(t.text) }
+        tweets.delete_if { |t| t.place.class == Twitter::NullObject }
         Tweet.destroy_all
-        all_tweets.each do |tweet|
+        tweets.each do |tweet|
           Tweet.create(
             text: tweet.text,
             latitude: tweet.geo.coordinates[0],
