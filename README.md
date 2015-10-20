@@ -14,7 +14,6 @@ An interactive mapping app that provides a sleek geographic interface to Twitter
 #### User Profiles
 - [X] User sign up and authentication
 - [X] User is publicly identified only by username
-- [ ] Personalized user dashboard based on connected Twitter account*
 
 #### Mapping
 - [X] Interactive map
@@ -42,20 +41,22 @@ An interactive mapping app that provides a sleek geographic interface to Twitter
 #### Sentiment analysis
 - [X] By topic
 - [X] By location
-- [ ] Overall analysis on homepage*
 - [ ] Visualized on heatmaps*
 
-Next goal: Try to implement Google-powered translation of tweets
+## Future
+- Try to implement Google-powered translation of tweets
+- Tweet text popups that include instagram links display the attached photos automatically
+- User can sign in with twitter and the app will generate a personalized dashboard for them, possibly including sentiment analysis of tweets in the user's feed
 
 ##### Original Icon Design Credits
 "trend" by Daouna Jeong. "trend" by Ryo Sato. "hashtag" by juan manjarrez. "hashtag" by matthew hall. "Location" by Creative Stall. "Target" by luc vega. "Smile", "displeased", and "Sad" by Golden Roof. All from the Noun Project.
 
 ## Local Development
 
-I welcome all positive contributions. To contribute to this project:
+I would love to work with anyone who is interested to further improve this application. To contribute, please:
 - Fork and clone down this repository
 - You will need seven API keys to run this app, which should be placed in a .env file
   - The first four are obtained from Twitter. Register your version of the app, and then add the four keys you receive under the names TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET, TWITTER_ACCESS_TOKEN, and TWITTER_CONSUMER_SECRET
   - You will also need keys from Google, Yahoo, and indico.io. Name these GOOGLE_GEOCODING, YAHOO, and INDICO
 - Note while running the test suite that some of the tests are disabled by default in the .rspec file:
-  - The tests in spec/apis serve as a quick connectivity dashboard; they can be run to ensure that nothing has changed in the configuration of the APIs that the application uses. They should only be run if the APIs themselves seem to be behaving irregularly in order to better diagnose the problem. Running them repeatedly over a short period of time will quickly burn through your quota of Twitter API calls. 
+  - The tests in spec/apis serve as a quick connectivity dashboard; they can be run to ensure that nothing has changed in the configuration of the APIs that the application uses. They should only be run if the APIs themselves seem to be behaving irregularly in order to better diagnose the problem. Running them repeatedly over a short period of time will quickly burn through your quota of Twitter API calls.
