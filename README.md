@@ -43,13 +43,12 @@ An interactive mapping app that provides a sleek geographic interface to Twitter
 - [X] By location
 - [ ] Visualized on heatmaps*
 
-## Future
-- Try to implement Google-powered translation of tweets
-- Tweet text popups that include instagram links display the attached photos automatically
-- User can sign in with twitter and the app will generate a personalized dashboard for them, possibly including sentiment analysis of tweets in the user's feed
-
 ##### Original Icon Design Credits
 "trend" by Daouna Jeong. "trend" by Ryo Sato. "hashtag" by juan manjarrez. "hashtag" by matthew hall. "Location" by Creative Stall. "Target" by luc vega. "Smile", "displeased", and "Sad" by Golden Roof. All from the Noun Project.
+
+## Future
+- Tweet text popups that include instagram links display the attached photos automatically
+- User can sign in with twitter and the app will generate a personalized dashboard for them, possibly including sentiment analysis of tweets in the user's feed
 
 ## Local Development
 
